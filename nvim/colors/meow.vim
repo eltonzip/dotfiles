@@ -101,7 +101,7 @@ hi SignColumn guifg=#008b8b guibg=NONE gui=NONE cterm=NONE
 hi SpecialKey guifg=#00ffff guibg=NONE gui=NONE cterm=NONE
 hi ToolbarButton guifg=NONE guibg=#999999 gui=bold cterm=bold
 hi ToolbarLine guifg=NONE guibg=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
-hi Visual guifg=#ffffff guibg=#9d00a7 gui=NONE cterm=NONE
+hi Visual guifg=#ffffff guibg=#91019a gui=NONE cterm=NONE
 hi VisualNOS guifg=NONE guibg=NONE gui=bold,underline ctermfg=NONE ctermbg=NONE cterm=bold,underline
 hi WarningMsg guifg=#ff0000 guibg=NONE gui=NONE cterm=NONE
 hi WildMenu guifg=#000000 guibg=#ffff00 gui=bold cterm=bold

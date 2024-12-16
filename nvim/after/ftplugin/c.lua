@@ -8,3 +8,5 @@ iabbrev('Celseif else if () {<cr>}<esc>kf)h')
 iabbrev('Cwhile while () {<cr>}<esc>kf)h')
 iabbrev('Cdwhile do {<cr>} while ()<esc>h')
 iabbrev('Cfor for () {<cr>}<esc>kf)h')
+
+vim.treesitter.start()

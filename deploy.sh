@@ -14,16 +14,16 @@ elif [ $(lsb_release -is) == 'Debian' ]; then
 		zathura fonts-noto fonts-noto-cjk \
 		libreoffice gimp obs htop
 fi
-# CommitMono Nerd Font needs to be installed manually
+# CommitMono Nerd Font needs to be installed manually for Debian systems
 
 cp bashrc $HOME/.bashrc
-cp scripts $HOME/scripts -r
+cp Scripts $HOME/Scripts -r
 
 cp nvim $HOME/.config/ -r
 cp xinitrc $HOME/.xinitrc
 cp i3 $HOME/.config/ -r
 cp i3status $HOME/.config/ -r
-mkdir .config/kitty -p && cp kitty.conf $HOME/.config/kitty/ -r
+mkdir .config/kitty && cp kitty.conf $HOME/.config/kitty/ -r
 cp zathura $HOME/.config/ -r
 cp ranger $HOME/.config/ -r
 cp Pictures/* $HOME/Pictures/

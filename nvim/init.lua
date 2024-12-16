@@ -26,6 +26,10 @@ vim.g.netrw_banner = 0
 -- StatusLine
 vim.o.statusline = '%y %20F %m %6l/%L'
 
+--- C/C++ stuff
+-- C syntax
+vim.g.c_syntax_for_h = 1
+
 --- Basic Keymaps
 vim.g.mapleader = ' '
 vim.g.maplocalleader = '\\'
