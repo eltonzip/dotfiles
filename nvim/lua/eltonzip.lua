@@ -99,12 +99,12 @@ m('n', '<leader>lc', vim.lsp.buf.rename)
 
 --- Clangd
 function M.start_clangd()
-	vim.api.nvim_create_autoc('FileType', {
+	vim.api.nvim_create_autocmd('FileType', {
 	pattern = {'c', 'cpp'},
 	callback = function(ev)
 		vim.lsp.start({
 			name = 'clangd',
-			c = {'clangd', '--background-index', '--clang-tidy', '--log=verbose'},
+			cmd = {'clangd', '--background-index', '--clang-tidy', '--log=verbose'},
 			root_dir = vim.fs.root(0, { 'compile_commands.json', 'Makefile', '.git', 'build.sh'})
 		})
 	end,
