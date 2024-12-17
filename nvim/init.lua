@@ -1,81 +1,82 @@
+local c = vim.cmd
+local o = vim.o
+local g = vim.g
+local m = vim.keymap.set
+
 --- Basic setup
 -- Colorscheme
-vim.cmd.colorscheme('meow')
+c.colorscheme('meow')
 
 -- Swap/backup files
-vim.o.swapfile = false
-vim.o.backup = false
+o.swapfile = false
+o.backup = false
 
 -- Tab
-vim.o.smarttab = true
-vim.o.expandtab = false
-vim.o.tabstop = 4
-vim.o.shiftwidth = 4
+o.smarttab = true
+o.expandtab = false
+o.tabstop = 4
+o.shiftwidth = 4
 
 -- Search stuff
-vim.o.ic = true
-vim.o.incsearch = true
+o.ic = true
+o.incsearch = true
 
 -- Copy to clipboard
-vim.o.mouse = ''
-vim.o.clipboard = "unnamedplus"
+o.mouse = ''
+o.clipboard = "unnamedplus"
 
 -- netrw
-vim.g.netrw_banner = 0
+g.netrw_banner = 0
 
 -- StatusLine
-vim.o.statusline = '%y %20F %m %6l/%L'
+o.statusline = '%y %20F %m %6l/%L'
 
 --- C/C++ stuff
 -- C syntax
-vim.g.c_syntax_for_h = 1
+g.c_syntax_for_h = 1
 
---- Basic Keymaps
-vim.g.mapleader = ' '
-vim.g.maplocalleader = '\\'
+--- Basic Keyms
+g.mapleader = ' '
+g.maplocalleader = '\\'
 
-local map = vim.keymap.set
+m('n', '-', ':Explore<cr>')
+m({'n', 't'}, '<leader>ff', ':FZF -x --walker=file,dir<cr>')
 
-map('n', '-', ':Explore<cr>')
-map({'n', 't'}, '<leader>ff', ':FZF -x --walker=file,dir<cr>')
+m('n', '<leader>wa', ':wa<cr>')
+m('n', '<leader>up', ':up<cr>')
 
-map('n', '<leader>wa', ':wa<cr>')
-map('n', '<leader>up', ':up<cr>')
+m({'n', 't'}, '<leader>ls', ':ls<cr>:b ')
+m({'n', 't'}, '<leader>bp', ':bp<cr>')
+m({'n', 't'}, '<leader>bd', ':bd<cr>')
+m({'n', 't'}, '<leader>bn', ':bn<cr>')
+m({'n', 't'}, '<leader>bl', ':bl<cr>')
 
-map({'n', 't'}, '<leader>ls', ':ls<cr>:b ')
-map({'n', 't'}, '<leader>bp', ':bp<cr>')
-map({'n', 't'}, '<leader>bd', ':bd<cr>')
-map({'n', 't'}, '<leader>bn', ':bn<cr>')
-map({'n', 't'}, '<leader>bl', ':bl<cr>')
+m('n', '<leader>tt', ':tabnew .<cr>')
 
-map('n', '<leader>tt', ':tabnew .<cr>')
+m('n', '<leader>mp', ':set makeprg=')
+m('n', '<leader>mm', ':make<cr>')
+m('n', '<leader>co', ':copen<cr>')
 
-map('n', '<leader>mp', ':set makeprg=')
-map('n', '<leader>mm', ':make<cr>')
-map('n', '<leader>co', ':copen<cr>')
+m('n', '<C-j>', ':cnext<cr>')
+m('n', '<C-k>', ':cprevious<cr>')
 
-map('n', '<C-j>', ':cnext<cr>')
-map('n', '<C-k>', ':cprevious<cr>')
+m('n', '<leader>cx', ':!chmod +x %<cr>')
 
-map('n', '<leader>cx', ':!chmod +x %<cr>')
-
-map('n', '<leader>te', ':b term<cr>')
-map('t', '<Esc>', '<C-\\><C-n>')
+m('n', '<leader>te', ':b term<cr>')
+m('t', '<Esc>', '<C-\\><C-n>')
 
 local M = {}
 
 --- Grep
-local cmd = vim.cmd
-
-cmd.set('grepprg=rg\\ --vimgrep\\ --no-heading\\ --smart-case')
+c.set('grepprg=rg\\ --vimgrep\\ --no-heading\\ --smart-case')
 
 function M.ripgrep()
 	local pattern = vim.fn.input('Rg > ')
 
 	if pattern == vim.fn.expand('<Esc>') then return 0 end
 
-	cmd.grep(pattern)
-	cmd.copen()
+	c.grep(pattern)
+	c.copen()
 end
 
 function M.ripgrep_buffer()
@@ -83,12 +84,12 @@ function M.ripgrep_buffer()
 
 	if pattern == vim.fn.expand('<Esc>') then return 0 end
 
-	cmd.grep(pattern .. ' %')
-	cmd.copen()
+	c.grep(pattern .. ' %')
+	c.copen()
 end
 
-map('n', '<leader>rp', M.ripgrep)
-map('n', '<leader>br', M.ripgrep_buffer)
+m('n', '<leader>rp', M.ripgrep)
+m('n', '<leader>br', M.ripgrep_buffer)
 
 --- More config
 require('eltonzip')

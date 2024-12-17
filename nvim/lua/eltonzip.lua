@@ -1,82 +1,82 @@
 local M = {}
 
-local map = vim.keymap.set
-local cmd = vim.cmd
-local create_command = vim.api.nvim_create_user_command
+local m = vim.keymap.set
+local c = vim.cmd
+local cc = vim.api.nvim_create_user_command
 
-create_command('EltonzipTest', 'echo "meow!"', {})
+cc('EltonzipTest', 'echo "meow!"', {})
 
 -- TODOs
 function M.find_todos()
-	cmd.grep('-s TODO')
-	cmd.copen()
+	c.grep('-s TODO')
+	c.copen()
 end
 
-create_command('EltonzipFindTodos', function(opts)
+cc('EltonzipFindTodos', function(opts)
 		M.find_todos()
 	end,
 	{nargs = 0})
 
-map('n', '<leader>eft', M.find_todos)
+m('n', '<leader>eft', M.find_todos)
 
 -- Find references
 function M.find_refs()
-	cmd.grep('-s ' .. vim.fn.expand('<cword>'))
-	cmd.copen()
+	c.grep('-s ' .. vim.fn.expand('<cword>'))
+	c.copen()
 end
 
-create_command('EltonzipFindRefs', function(opts)
+cc('EltonzipFindRefs', function(opts)
 		M.find_refs()
 	end,
 	{nargs = 0})
 
-map('n', '<leader>er', ':EltonzipFindRefs<cr>')
+m('n', '<leader>er', ':EltonzipFindRefs<cr>')
 
 -- Find references (src/)
 function M.find_refs_src()
-	cmd.grep('-s ' .. vim.fn.expand('<cword>') .. ' src')
-	cmd.copen()
+	c.grep('-s ' .. vim.fn.expand('<cword>') .. ' src')
+	c.copen()
 end
 
-create_command('EltonzipFindRefsSrc', function(opts)
+cc('EltonzipFindRefsSrc', function(opts)
 		M.find_refs_src()
 	end,
 	{nargs = 0})
 
-map('n', '<leader>es', ':EltonzipFindRefsSrc<cr>')
+m('n', '<leader>es', ':EltonzipFindRefsSrc<cr>')
 
 -- Find references (WORD)
 function M.find_refs_word()
-	cmd.grep('-s -e ' .. vim.fn.expand('<cWORD>'))
-	cmd.copen()
+	c.grep('-s -e ' .. vim.fn.expand('<cWORD>'))
+	c.copen()
 end
 
-create_command('EltonzipFindRefsWord', function(opts)
+cc('EltonzipFindRefsWord', function(opts)
 		M.find_refs_word()
 	end,
 	{nargs = 0})
 
-map('n', '<leader>ew', ':EltonzipFindRefsWord<cr>')
+m('n', '<leader>ew', ':EltonzipFindRefsWord<cr>')
 
 -- Find references (buffer)
 function M.find_refs_buff()
-	cmd.grep('-s ' .. vim.fn.expand('<cword>') .. ' %')
-	cmd.copen()
+	c.grep('-s ' .. vim.fn.expand('<cword>') .. ' %')
+	c.copen()
 end
 
-create_command('EltonzipFindRefsBuff', function(opts)
+cc('EltonzipFindRefsBuff', function(opts)
 		M.find_refs_buff()
 	end,
 	{nargs = 0})
 
-map('n', '<leader>eb', ':EltonzipFindRefsBuff<cr>')
+m('n', '<leader>eb', ':EltonzipFindRefsBuff<cr>')
 
 -- Quicklist rename
 function M.quicklist_rename(old_name, new_name)
-	cmd.cdo('s/\\C' .. old_name .. '/' .. new_name .. '/g | update')
+	c.cdo('s/\\C' .. old_name .. '/' .. new_name .. '/g | update')
 end
 
-create_command('EltonzipQuicklistRename', function(opts)
+cc('EltonzipQuicklistRename', function(opts)
 		local from = vim.fn.input('Rename pattern > ')
 		if from == vim.fn.expand('<Esc>') or from == vim.fn.expand('<Enter>') then return 0 end
 
@@ -87,33 +87,33 @@ create_command('EltonzipQuicklistRename', function(opts)
 	end,
 	{nargs = '*'})
 
-map('n', '<leader>ec', ':EltonzipQuicklistRename<cr>')
+m('n', '<leader>ec', ':EltonzipQuicklistRename<cr>')
 
 --- LSP config
 vim.diagnostic.config({
 	signs = false,
 })
 
-map('n', '<leader>lr', vim.lsp.buf.references)
-map('n', '<leader>lc', vim.lsp.buf.rename)
+m('n', '<leader>lr', vim.lsp.buf.references)
+m('n', '<leader>lc', vim.lsp.buf.rename)
 
 --- Clangd
 function M.start_clangd()
-	vim.api.nvim_create_autocmd('FileType', {
+	vim.api.nvim_create_autoc('FileType', {
 	pattern = {'c', 'cpp'},
 	callback = function(ev)
 		vim.lsp.start({
 			name = 'clangd',
-			cmd = {'clangd', '--background-index', '--clang-tidy', '--log=verbose'},
+			c = {'clangd', '--background-index', '--clang-tidy', '--log=verbose'},
 			root_dir = vim.fs.root(0, { 'compile_commands.json', 'Makefile', '.git', 'build.sh'})
 		})
 	end,
 	})
 end
 
-create_command('EltonzipStartClangd', function(opts)
+cc('EltonzipStartClangd', function(opts)
 	M.start_clangd()
 	end,
 	{nargs = 0})
 
-map('n', '<leader>elsc', ':EltonzipStartClangd<cr>')
+m('n', '<leader>elsc', ':EltonzipStartClangd<cr>')
