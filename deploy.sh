@@ -23,7 +23,7 @@ cp nvim $HOME/.config/ -r
 cp xinitrc $HOME/.xinitrc
 cp i3 $HOME/.config/ -r
 cp i3status $HOME/.config/ -r
-mkdir .config/kitty && cp kitty.conf $HOME/.config/kitty/ -r
+cp kitty $HOME/.config/ -r
 cp zathura $HOME/.config/ -r
 cp ranger $HOME/.config/ -r
 cp Pictures/* $HOME/Pictures/
