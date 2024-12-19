@@ -18,11 +18,11 @@ o.tabstop = 4
 o.shiftwidth = 4
 
 -- Search stuff
-o.ic = true
+o.ignorecase = true
 o.incsearch = true
 
 -- Copy to clipboard
-o.mouse = ''
+o.mouse = 'a'
 o.clipboard = "unnamedplus"
 
 -- netrw
@@ -40,7 +40,7 @@ g.mapleader = ' '
 g.maplocalleader = '\\'
 
 m('n', '-', ':Explore<cr>')
-m({'n', 't'}, '<leader>ff', ':FZF -x --walker=file,dir<cr>')
+m({'n', 't'}, '<leader>ff', ':FZF -e --walker=file,dir<cr>')
 
 m('n', '<leader>wa', ':wa<cr>')
 m('n', '<leader>up', ':up<cr>')

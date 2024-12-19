@@ -211,4 +211,4 @@ default_border normal 4
 
 include $HOME/.config/i3/classes.conf
 include $HOME/.config/i3/autostart.conf
-include $HOME/.config/i3/launcher_mod.conf
+include $HOME/.config/i3/launcher_mode.conf
