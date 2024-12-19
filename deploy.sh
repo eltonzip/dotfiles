@@ -4,7 +4,7 @@ if [ $(lsb_release -is) == 'Arch' ]; then
 	pacman -S kitty ranger mpv python-pillow neovim fzf ripgrep \
 		i3 xorg xorg-xinit xorg-server dunst xfce4-power-manager firefox  pavucontrol \
 		pipewire pipewire-alsa pipewire-pulse \
-		zathura emacs \
+		zathura \
 		otf-commit-mono-nerd noto-fonts noto-fonts-cjk \
 		libreoffice gimp obs htop
 elif [ $(lsb_release -is) == 'Debian' ]; then
