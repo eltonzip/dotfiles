@@ -35,7 +35,7 @@ o.statusline = '%y %20F %m %6l/%L'
 -- C syntax
 g.c_syntax_for_h = 1
 
---- Basic Keyms
+--- Basic Keymaps
 g.mapleader = ' '
 g.maplocalleader = '\\'
 
