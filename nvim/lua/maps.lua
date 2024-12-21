@@ -1,3 +1,7 @@
+--- Basic Keymaps
+vim.g.mapleader = ' '
+vim.g.maplocalleader = '\\'
+
 local m = vim.keymap.set
 
 m('n', '-', ':Explore<cr>')
