@@ -42,7 +42,7 @@ local M = {}
 c.set('grepprg=rg\\ --vimgrep\\ --no-heading\\ --smart-case')
 
 function M.ripgrep()
-	local pattern = vim.fn.input('Rg > ')
+	local pattern = vim.fn.input('rg > ')
 
 	if pattern == vim.fn.expand('<Esc>') then return 0 end
 
@@ -51,7 +51,7 @@ function M.ripgrep()
 end
 
 function M.ripgrep_buffer()
-	local pattern = vim.fn.input('Rg (buffer) > ')
+	local pattern = vim.fn.input('rg (buffer) > ')
 
 	if pattern == vim.fn.expand('<Esc>') then return 0 end
 
