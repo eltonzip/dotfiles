@@ -35,10 +35,10 @@ o.statusline = '%y %20F %m %6l/%L'
 -- C syntax
 g.c_syntax_for_h = 1
 
---- More config
+--- Advanced setup
 local M = {}
 
---- Grep
+-- Grep
 c.set('grepprg=rg\\ --vimgrep\\ --no-heading\\ --smart-case')
 
 function M.ripgrep()
