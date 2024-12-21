@@ -47,7 +47,7 @@ m('n', '<leader>es', ':EltonzipFindRefsSrc<cr>')
 
 -- Find references (WORD)
 function M.find_refs_word()
-	c.grep('-s -e ' .. vim.fn.expand('<cWORD>'))
+	c.grep('-s ' .. vim.fn.expand('<cWORD>'))
 	c.copen()
 end
 
@@ -105,7 +105,7 @@ function M.start_clangd()
 		vim.lsp.start({
 			name = 'clangd',
 			cmd = {'clangd', '--background-index', '--clang-tidy', '--log=verbose'},
-			root_dir = vim.fs.root(0, { 'compile_commands.json', 'Makefile', '.git', 'build.sh'})
+			root_dir = vim.fs.root(0, {'compile_commands.json', 'Makefile', '.git', 'build.sh'})
 		})
 	end,
 	})
