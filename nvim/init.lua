@@ -36,6 +36,9 @@ o.statusline = '%y %20F %m %6l/%L'
 g.c_syntax_for_h = 1
 
 --- Advanced setup
+vim.g.mapleader = ' '
+vim.g.maplocalleader = '\\'
+
 local M = {}
 
 -- Grep
