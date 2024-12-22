@@ -84,7 +84,11 @@ else
 endif
 
 function! EltonzipGrepPrompt()
-	let pattern = input('pattern: ')
+	let pattern = input('Pattern: ')
+
+	if pattern == expand("<Esc>") || pattern == expand("<cr>")
+		return 0
+	endif
 
 	execute "grep ".pattern
 	copen
