@@ -2,7 +2,7 @@
 
 cp $HOME/.bashrc $HOME/dotfiles/bashrc
 cp $HOME/.xinitrc $HOME/dotfiles/xinitrc
-cp $HOME/.config/nvim/* $HOME/dotfiles/nvim -r
+cp $HOME/.vimrc $HOME/dotfiles/vimrc
 cp $HOME/.config/i3/* $HOME/dotfiles/i3
 cp $HOME/.config/i3status/* $HOME/dotfiles/i3status
 cp $HOME/.config/kitty/* $HOME/dotfiles/kitty
