@@ -20,6 +20,26 @@ set tabstop=4
 syntax on
 colorscheme evening
 
+" Keymaps
+let mapleader = " "
+let maplocalleader = "\\"
+
+nnoremap - :Explore<cr>
+
+if executable('fzf')
+	nnoremap <leader>ff :FZF -e --walker=file,dir<cr>
+else
+	set path+=**
+	nnoremap <leader>ff :find 
+endif
+
+nnoremap <leader>ls :ls<cr>:b 
+
+nnoremap <C-j> :cnext<cr>
+nnoremap <C-k> :cprevious<cr>
+
+nnoremap <silent> <C-l> :nohl<cr><C-l>
+
 " C/C++ stuff
 let c_syntax_for_h = 1
 
@@ -63,31 +83,13 @@ else
 	set grepprg=grep\ -rn
 endif
 
-" Cursor
-let &t_SI = "\e]12;green\x7"
-let &t_EI = "\e]12;cyan\x7"
+function! EltonzipGrepPrompt()
+	let pattern = input('pattern: ')
 
-" Keymaps
-let mapleader = " "
-let maplocalleader = "\\"
+	execute "grep ".pattern
+	copen
+endfunction
 
-nnoremap - :Explore<cr>
-
-if executable('fzf')
-	nnoremap <leader>ff :FZF -e --walker=file,dir<cr>
-else
-	set path+=**
-	nnoremap <leader>ff :find 
-endif
-
-nnoremap <leader>ls :ls<cr>:b 
-
-nnoremap <C-j> :cnext<cr>
-nnoremap <C-k> :cprevious<cr>
-
-nnoremap <silent> <C-l> :nohl<cr><C-l>
-
-" Advanced grep
 function! EltonzipGrep(num)
 	if !a:num
 		grep <cword>
@@ -98,8 +100,13 @@ function! EltonzipGrep(num)
 	copen
 endfunction
 
+nnoremap <leader>rp :call EltonzipGrepPrompt()<cr>
 nnoremap <leader>mr :call EltonzipGrep(0)<cr>
 nnoremap <leader>ms :call EltonzipGrep(1)<cr>
+
+" Cursor
+let &t_SI = "\e]12;green\x7"
+let &t_EI = "\e]12;cyan\x7"
 
 " Advanced yank
 function! EltonzipYank()
