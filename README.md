@@ -4,7 +4,7 @@
     - CommitMono Nerd Font
     - python-pillow (to have an image preview in ranger)
 - Ranger
-- Neovim
+- Vim
     - fzf
     - ripgrep
 - i3
