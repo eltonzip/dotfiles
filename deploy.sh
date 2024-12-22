@@ -5,7 +5,7 @@ if [ $(lsb_release -is) == 'Arch' ]; then
 		i3 xorg xorg-xinit xorg-server dunst xfce4-power-manager firefox  pavucontrol \
 		pipewire pipewire-alsa pipewire-pulse \
 		zathura \
-		otf-commit-mono-nerd noto-fonts noto-fonts-cjk \
+		otf-commit-mono-nerd ttf-hack-nerd noto-fonts noto-fonts-cjk \
 		libreoffice gimp obs htop
 elif [ $(lsb_release -is) == 'Debian' ]; then
 	apt install kitty ranger mpv python3-pillow vim fzf ripgrep \
@@ -14,7 +14,7 @@ elif [ $(lsb_release -is) == 'Debian' ]; then
 		zathura fonts-noto fonts-noto-cjk \
 		libreoffice gimp obs htop
 fi
-# CommitMono Nerd Font needs to be installed manually for Debian systems
+# Nerd Fonts need to be installed manually for Debian systems
 
 cp bashrc $HOME/.bashrc
 cp Scripts $HOME/Scripts -r

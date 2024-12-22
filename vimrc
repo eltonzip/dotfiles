@@ -1,6 +1,8 @@
 " Options
 set nocompatible
 
+set noshowmode
+
 set noswapfile
 set nobackup
 
@@ -39,6 +41,11 @@ nnoremap <C-j> :cnext<cr>
 nnoremap <C-k> :cprevious<cr>
 
 nnoremap <silent> <C-l> :nohl<cr><C-l>
+
+nnoremap <C-,> O<Esc>
+
+nnoremap <leader>mp :set makeprg=
+nnoremap <leader>mm :execute "make \| copen"<cr>
 
 " C/C++ stuff
 let c_syntax_for_h = 1
@@ -121,3 +128,4 @@ function! EltonzipYank()
 endfunction
 
 nnoremap <silent> <C-p> :call EltonzipYank()<cr>
+nnoremap <silent> <C-c> :call EltonzipYank()<cr>C

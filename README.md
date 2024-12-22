@@ -8,6 +8,7 @@
     - fzf
     - ripgrep
 - i3
+	- Hack Nerd Font
     - Pipewire
     - Any terminal emulator
     - dunst
