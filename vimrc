@@ -76,6 +76,19 @@ augroup python
 	autocmd FileType python call EltonzipPythonAbbr()
 augroup END
 
+" Bash stuff
+
+function! EltonzipBashAbbr()
+	iabbrev Bif if [  ]; then<cr>fi<Esc>kf[l
+	iabbrev Belif elif [  ]; then<Esc>hhhhhhhh
+	iabbrev Bfunction function () {<cr>}<Esc>kf(h
+endfunction
+
+augroup shell
+	autocmd!
+	autocmd FileType sh call EltonzipBashAbbr()
+augroup END
+
 " Statusline
 set laststatus=2
 set statusline=%y\ %20F\ %m\ %6l
@@ -104,8 +117,10 @@ endfunction
 function! EltonzipGrep(num)
 	if !a:num
 		grep <cword>
-	else
+	elseif a:num == 1
 		grep <cword> src/
+	else
+		grep <cword> %
 	endif
 
 	copen
@@ -114,6 +129,7 @@ endfunction
 nnoremap <leader>rp :call EltonzipGrepPrompt()<cr>
 nnoremap <leader>mr :call EltonzipGrep(0)<cr>
 nnoremap <leader>ms :call EltonzipGrep(1)<cr>
+nnoremap <leader>mb :call EltonzipGrep(2)<cr>
 
 " Cursor
 let &t_SI = "\e]12;green\x7"
@@ -127,5 +143,5 @@ function! EltonzipYank()
 	execute "normal! yyp0".pos."l"
 endfunction
 
-nnoremap <silent> <C-p> :call EltonzipYank()<cr>
-nnoremap <silent> <C-c> :call EltonzipYank()<cr>C
+nnoremap <silent> <C-n> :call EltonzipYank()<cr>
+nnoremap <silent> <C-p> :call EltonzipYank()<cr>C
