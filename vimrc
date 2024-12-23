@@ -37,8 +37,8 @@ endif
 
 nnoremap <leader>ls :ls<cr>:b 
 
-nnoremap <C-j> :cnext<cr>
-nnoremap <C-k> :cprevious<cr>
+nnoremap <silent> <C-j> :cnext<cr>
+nnoremap <silent> <C-k> :cprevious<cr>
 
 nnoremap <silent> <C-l> :nohl<cr><C-l>
 
