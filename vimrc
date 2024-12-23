@@ -79,7 +79,7 @@ augroup END
 " Bash stuff
 function! EltonzipBashAbbr()
 	iabbrev Bif if [  ]; then<cr>fi<Esc>kf[l
-	iabbrev Belif elif [  ]; then<Esc>hhhhhhhh
+	iabbrev Belif elif [  ]; then<Esc>F]hh
 	iabbrev Bfunction function  {<cr>}<Esc>kt{h
 endfunction
 
