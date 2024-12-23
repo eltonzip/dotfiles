@@ -81,7 +81,7 @@ augroup END
 function! EltonzipBashAbbr()
 	iabbrev Bif if [  ]; then<cr>fi<Esc>kf[l
 	iabbrev Belif elif [  ]; then<Esc>hhhhhhhh
-	iabbrev Bfunction function () {<cr>}<Esc>kf(h
+	iabbrev Bfunction function  {<cr>}<Esc>kt{h
 endfunction
 
 augroup shell
