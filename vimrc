@@ -47,6 +47,9 @@ nnoremap <C-,> O<Esc>
 nnoremap <leader>mp :set makeprg=
 nnoremap <leader>mm :execute "make \| copen"<cr>
 
+nnoremap <silent> <leader>ke :set keymap=""<cr>
+nnoremap <silent> <leader>kr :set keymap=russian-jcukenwin<cr>
+
 " C/C++ stuff
 let c_syntax_for_h = 1
 
