@@ -33,9 +33,6 @@ endfunction
 
 call EltonzipTheme()
 
-nnoremap <leader>ce :colo evening<cr>
-nnoremap <leader>cz :call EltonzipTheme()<cr>
-
 " Keymaps
 let mapleader = " "
 let maplocalleader = "\\"
@@ -63,6 +60,9 @@ nnoremap <leader>mm :execute "make \| copen"<cr>
 
 nnoremap <silent> <leader>ke :set keymap=""<cr>
 nnoremap <silent> <leader>kr :set keymap=russian-jcukenwin<cr>
+
+nnoremap <leader>ce :colo evening<cr>
+nnoremap <leader>cz :call EltonzipTheme()<cr>
 
 " C/C++ stuff
 let c_syntax_for_h = 1
