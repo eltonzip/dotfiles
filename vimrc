@@ -6,6 +6,7 @@ set noshowmode
 set noswapfile
 set nobackup
 
+set autoindent
 set smartindent
 
 set hlsearch
