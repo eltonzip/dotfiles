@@ -13,6 +13,8 @@ set hlsearch
 set incsearch
 set ignorecase
 
+set mouse=a
+
 " Tabs
 set noexpandtab
 set smarttab
