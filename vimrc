@@ -24,7 +24,9 @@ set tabstop=4
 
 " Colors
 syntax on
-colorscheme evening
+colorscheme zaibatsu
+hi Normal ctermbg=NONE
+hi EndOfBuffer ctermbg=NONE
 
 " Keymaps
 let mapleader = " "
