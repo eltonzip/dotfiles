@@ -139,8 +139,7 @@ let &t_EI = "\e]12;cyan\x7"
 
 " Advanced yank
 function! EltonzipYank()
-	let pos = getpos(".")[2]
-	let pos -= 1
+	let pos = getpos(".")[2] - 1
 
 	execute "normal! yyp0".pos."l"
 endfunction
