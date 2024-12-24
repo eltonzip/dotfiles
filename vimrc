@@ -141,7 +141,11 @@ let &t_EI = "\e]12;cyan\x7"
 function! EltonzipYank()
 	let pos = getpos(".")[2] - 1
 
-	execute "normal! yyp0".pos."l"
+	if pos > 0
+		execute "normal! yyp0".pos."l"
+	else
+		execute "normal! yyp"
+	endif
 endfunction
 
 nnoremap <silent> <C-n> :call EltonzipYank()<cr>
