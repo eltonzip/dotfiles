@@ -22,7 +22,6 @@ set tabstop=4
 " Colors
 syntax on
 colorscheme evening
-hi Normal ctermbg=NONE
 
 " Keymaps
 let mapleader = " "
