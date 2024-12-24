@@ -24,9 +24,17 @@ set tabstop=4
 
 " Colors
 syntax on
-colorscheme zaibatsu
-hi Normal ctermbg=NONE
-hi EndOfBuffer ctermbg=NONE
+
+function! EltonzipTheme()
+	colorscheme zaibatsu
+	hi Normal ctermbg=NONE
+	hi EndOfBuffer ctermbg=NONE
+endfunction
+
+call EltonzipTheme()
+
+nnoremap <leader>ce :colo evening<cr>
+nnoremap <leader>cz :call EltonzipTheme()<cr>
 
 " Keymaps
 let mapleader = " "
