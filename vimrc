@@ -31,7 +31,7 @@ function! EltonzipTheme()
 	hi EndOfBuffer ctermbg=NONE
 endfunction
 
-call EltonzipTheme()
+colo evening
 
 " Keymaps
 let mapleader = " "
@@ -53,7 +53,7 @@ nnoremap <silent> <C-k> :cprevious<cr>
 
 nnoremap <silent> <C-l> :nohl<cr><C-l>
 
-nnoremap <C-,> O<Esc>
+nnoremap <C-p> O<Esc>
 
 nnoremap <leader>mp :set makeprg=
 nnoremap <leader>mm :execute "make \| copen"<cr>
@@ -150,17 +150,3 @@ nnoremap <leader>mb :call EltonzipGrep(2)<cr>
 " Cursor
 let &t_SI = "\e]12;green\x7"
 let &t_EI = "\e]12;cyan\x7"
-
-" Advanced yank
-function! EltonzipYank()
-	let pos = getpos(".")[2] - 1
-
-	if pos > 0
-		execute "normal! yyp0".pos."l"
-	else
-		execute "normal! yyp"
-	endif
-endfunction
-
-nnoremap <silent> <C-n> :call EltonzipYank()<cr>
-nnoremap <silent> <C-p> :call EltonzipYank()<cr>C
