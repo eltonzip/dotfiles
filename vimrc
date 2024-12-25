@@ -16,7 +16,7 @@ set smartcase
 
 set mouse=a
 
-set laststatus=1
+set laststatus=2
 
 " Tabs
 set noexpandtab
