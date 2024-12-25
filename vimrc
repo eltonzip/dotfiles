@@ -16,6 +16,8 @@ set smartcase
 
 set mouse=a
 
+set laststatus=1
+
 " Tabs
 set noexpandtab
 set smarttab
@@ -104,10 +106,6 @@ augroup shell
 	autocmd!
 	autocmd FileType sh call EltonzipBashAbbr()
 augroup END
-
-" Statusline
-set laststatus=2
-set statusline=%y\ %20F\ %m\ %6l
 
 " netrw
 let g:netrw_banner = 0
