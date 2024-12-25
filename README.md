@@ -3,6 +3,7 @@
 - kitty
 	- CommitMono Nerd Font
 	- python-pillow (to have an image preview in ranger)
+- tmux
 - Ranger
 - Vim
 	- fzf

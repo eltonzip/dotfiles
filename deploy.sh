@@ -1,14 +1,14 @@
 #!/bin/env bash
 
 if [ $(lsb_release -is) == 'Arch' ]; then
-	pacman -S kitty ranger mpv python-pillow vim fzf ripgrep \
+	pacman -S kitty tmux ranger mpv python-pillow vim fzf ripgrep \
 		i3 xorg xorg-xinit xorg-server dunst xfce4-power-manager firefox  pavucontrol \
 		pipewire pipewire-alsa pipewire-pulse \
 		zathura \
 		otf-commit-mono-nerd ttf-hack-nerd noto-fonts noto-fonts-cjk \
 		libreoffice gimp obs htop
 elif [ $(lsb_release -is) == 'Debian' ]; then
-	apt install kitty ranger mpv python3-pillow vim fzf ripgrep \
+	apt install kitty tmux ranger mpv python3-pillow vim fzf ripgrep \
 		i3 xorg dunst xfce4-power-manager firefox pavucontrol \
 		pipewire pipewire-alas pipewire-pulse \
 		zathura fonts-noto fonts-noto-cjk \
