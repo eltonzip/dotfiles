@@ -31,7 +31,7 @@ function! EltonzipTheme()
 	hi EndOfBuffer ctermbg=NONE
 endfunction
 
-colo evening
+colorscheme evening
 
 " Keymaps
 let mapleader = " "
@@ -61,8 +61,8 @@ nnoremap <leader>mm :execute "make \| copen"<cr>
 nnoremap <silent> <leader>ke :set keymap=""<cr>
 nnoremap <silent> <leader>kr :set keymap=russian-jcukenwin<cr>
 
-nnoremap <leader>ce :colo evening<cr>
-nnoremap <leader>cz :call EltonzipTheme()<cr>
+nnoremap <silent> <leader>ce :colo evening<cr>
+nnoremap <silent> <leader>cz :call EltonzipTheme()<cr>
 
 " C/C++ stuff
 let c_syntax_for_h = 1
