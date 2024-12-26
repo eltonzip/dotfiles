@@ -116,6 +116,9 @@ fi
 
 ### My stuff
 
+## More handy bin
+export PATH=$PATH:$HOME/bin
+
 ## Prompt
 PS1='\[\033[01;34m\]\u\[\033[00m\] \[\033[01;32m\]\w\[\033[00m\] (\h)\n$? \[\033[01;33m\]>\[\033[00m\] '
 
