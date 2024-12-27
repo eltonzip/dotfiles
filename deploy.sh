@@ -25,6 +25,7 @@ cp Scripts $HOME/Scripts -r
 
 cp vimrc $HOME/.vimrc
 cp xinitrc $HOME/.xinitrc
+cp tmux $HOME/.config/ -r
 cp i3 $HOME/.config/ -r
 cp i3status $HOME/.config/ -r
 cp kitty $HOME/.config/ -r
