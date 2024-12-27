@@ -8,6 +8,7 @@
 - Vim
 	- fzf
 	- ripgrep
+	- ctags
 - i3
 	- Hack Nerd Font
 	- Pipewire

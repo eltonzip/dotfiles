@@ -4,6 +4,7 @@ if [ $(lsb_release -is) == 'Arch' ]; then
 	pacman -S kitty tmux ranger mpv python-pillow vim fzf ripgrep \
 		i3 xorg xorg-xinit xorg-server dunst xfce4-power-manager firefox  pavucontrol \
 		flameshot dmenu \
+		ctags \
 		pipewire pipewire-alsa pipewire-pulse \
 		zathura \
 		otf-commit-mono-nerd ttf-hack-nerd noto-fonts noto-fonts-cjk \
@@ -12,6 +13,7 @@ elif [ $(lsb_release -is) == 'Debian' ]; then
 	apt install kitty tmux ranger mpv python3-pillow vim fzf ripgrep \
 		i3 xorg dunst xfce4-power-manager firefox pavucontrol \
 		flameshot dmenu \
+		ctags \
 		pipewire pipewire-alas pipewire-pulse \
 		zathura fonts-noto fonts-noto-cjk \
 		libreoffice gimp obs htop
