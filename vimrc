@@ -66,6 +66,8 @@ nnoremap <silent> <leader>kr :set keymap=russian-jcukenwin<cr>
 nnoremap <silent> <leader>ce :colo evening<cr>
 nnoremap <silent> <leader>cz :call EltonzipTheme()<cr>
 
+nnoremap <leader>cx :!chmod +x %<cr>
+
 " C/C++ stuff
 let c_syntax_for_h = 1
 
