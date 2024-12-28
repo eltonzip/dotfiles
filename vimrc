@@ -90,6 +90,7 @@ augroup END
 " Python stuff
 function! EltonzipPythonAbbr()
 	iabbrev Pdef def ():<esc>hhh
+	iabbrev Pmain if __name__ == "__main__":
 endfunction
 
 augroup python
