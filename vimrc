@@ -26,13 +26,6 @@ set tabstop=4
 
 " Colors
 syntax on
-
-function! EltonzipTheme()
-	colorscheme zaibatsu
-	hi Normal ctermbg=NONE
-	hi EndOfBuffer ctermbg=NONE
-endfunction
-
 colorscheme evening
 
 " Keymaps
@@ -147,7 +140,3 @@ nnoremap <leader>rp :call EltonzipGrepPrompt()<cr>
 nnoremap <leader>mr :call EltonzipGrep(0)<cr>
 nnoremap <leader>ms :call EltonzipGrep(1)<cr>
 nnoremap <leader>mb :call EltonzipGrep(2)<cr>
-
-" Cursor
-let &t_SI = "\e]12;green\x7"
-let &t_EI = "\e]12;cyan\x7"
