@@ -1,7 +1,7 @@
 # My dotfiles
 ## Requirements:
-- kitty
-	- CommitMono Nerd Font
+- alacritty
+	- Hack Nerd Font
 	- python-pillow (to have an image preview in ranger)
 - tmux
 - Ranger
