@@ -1,10 +1,10 @@
 # My dotfiles
 ## Requirements:
-- alacritty
+- Alacritty
 	- Hack Nerd Font
-	- python-pillow (to have an image preview in ranger)
 - tmux
 - Ranger
+	- mpv
 - Vim
 	- fzf
 	- ripgrep

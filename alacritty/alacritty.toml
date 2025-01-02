@@ -42,7 +42,7 @@ cyan = '#186c60'
 white = '#63686d'
 
 [font]
-size = 15
+size = 14
 
 [font.normal]
 family = "Hack Nerd Font"
