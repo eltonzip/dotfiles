@@ -12,6 +12,7 @@ vim.diagnostic.config({
 	signs = false
 })
 
+-- Clangd
 vim.api.nvim_create_autocmd('FileType', {
 	pattern = {'c', 'cpp'},
 	callback = function(ev)
