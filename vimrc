@@ -33,8 +33,24 @@ let maplocalleader = "\\"
 
 nnoremap - :Explore<cr>
 
-set path+=**
-nnoremap <leader>ff :find ./
+if executable('fzf')
+	nnoremap <leader>ff :FZF -e --walker=file,dir<cr>
+else
+	set path+=**
+	nnoremap <leader>ff :find ./
+endif
+
+function! EltonzipFind(num)
+	if !a:num
+		nnoremap <leader>ff :FZF -e --walker=file,dir<cr>
+	elseif a:num
+		set path+=**
+		nnoremap <leader>ff :find ./
+	endif
+endfunction
+
+nnoremap <silent> <leader>mz :call EltonzipFind(0)<cr>
+nnoremap <silent> <leader>mf :call EltonzipFind(1)<cr>
 
 nnoremap <leader>ls :ls<cr>:b 
 
