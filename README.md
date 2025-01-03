@@ -6,7 +6,6 @@
 - Ranger
 	- mpv
 - Vim
-	- fzf
 	- ripgrep
 	- ctags
 - i3

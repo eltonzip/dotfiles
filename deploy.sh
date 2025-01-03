@@ -1,7 +1,7 @@
 #!/bin/env bash
 
 if [ $(lsb_release -is) == 'Arch' ]; then
-	pacman -S alacritty tmux ranger mpv vim fzf ripgrep \
+	pacman -S alacritty tmux ranger mpv vim ripgrep \
 		i3 xorg xorg-xinit xorg-server dunst xfce4-power-manager firefox  pavucontrol \
 		flameshot dmenu \
 		ctags \
@@ -10,7 +10,7 @@ if [ $(lsb_release -is) == 'Arch' ]; then
 		ttf-hack-nerd noto-fonts noto-fonts-cjk \
 		libreoffice gimp obs-studio htop
 elif [ $(lsb_release -is) == 'Debian' ]; then
-	apt install alacritty tmux ranger mpv vim fzf ripgrep \
+	apt install alacritty tmux ranger mpv vim ripgrep \
 		i3 xorg dunst xfce4-power-manager firefox pavucontrol \
 		flameshot dmenu \
 		ctags \

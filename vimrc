@@ -33,12 +33,8 @@ let maplocalleader = "\\"
 
 nnoremap - :Explore<cr>
 
-if executable('fzf')
-	nnoremap <leader>ff :FZF -e --walker=file,dir<cr>
-else
-	set path+=**
-	nnoremap <leader>ff :find 
-endif
+set path+=**
+nnoremap <leader>ff :find 
 
 nnoremap <leader>ls :ls<cr>:b 
 
