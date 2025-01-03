@@ -103,7 +103,7 @@ let g:netrw_banner = 0
 
 " Grep
 if executable('rg')
-	set grepprg=rg\ --vimgrep\ --no-heading\ --smart-case
+	set grepprg=rg\ --vimgrep\ --no-heading\ --smart-case\ --iglob=!tags
 else
 	set grepprg=grep\ -rn
 endif
