@@ -34,7 +34,7 @@ let maplocalleader = "\\"
 nnoremap - :Explore<cr>
 
 set path+=**
-nnoremap <leader>ff :find 
+nnoremap <leader>ff :find ./
 
 nnoremap <leader>ls :ls<cr>:b 
 
