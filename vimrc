@@ -24,6 +24,11 @@ set smarttab
 set shiftwidth=4
 set tabstop=4
 
+" Clipboard
+if has('clipboard')
+	set clipboard^=unnamedplus
+endif
+
 " Colors
 syntax on
 colorscheme evening
