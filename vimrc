@@ -25,7 +25,7 @@ set shiftwidth=4
 set tabstop=4
 
 " Clipboard
-if has('clipboard')
+if has('unnamedplus')
 	set clipboard^=unnamedplus
 endif
 
