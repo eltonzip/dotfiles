@@ -1,6 +1,5 @@
 " Options
 set nocompatible
-
 set noshowmode
 
 set noswapfile
@@ -72,9 +71,6 @@ nnoremap <leader>mm :execute "make \| copen"<cr>
 
 nnoremap <silent> <leader>ke :set keymap=""<cr>
 nnoremap <silent> <leader>kr :set keymap=russian-jcukenwin<cr>
-
-nnoremap <silent> <leader>ce :colo evening<cr>
-nnoremap <silent> <leader>cz :call EltonzipTheme()<cr>
 
 nnoremap <leader>cx :!chmod +x %<cr>
 
