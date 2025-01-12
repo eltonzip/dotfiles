@@ -83,7 +83,7 @@ function! EltonzipCAbbr()
 	iabbrev Celse else {<cr>}<esc>k$
 	iabbrev Celseif else if () {<cr>}<esc>kf)h
 	iabbrev Cwhile while () {<cr>}<esc>kf)h
-	iabbrev Cdowhile do {<cr>} while ()<esc>h
+	iabbrev Cdowhile do {<cr>} while ();<esc>hh
 	iabbrev Cfor for () {<cr>}<esc>kf)h
 endfunction
 
