@@ -1,6 +1,7 @@
 " Options
 set nocompatible
 set noshowmode
+set laststatus=2
 
 set noswapfile
 set nobackup
@@ -82,7 +83,7 @@ function! EltonzipCAbbr()
 	iabbrev Celse else {<cr>}<esc>k$
 	iabbrev Celseif else if () {<cr>}<esc>kf)h
 	iabbrev Cwhile while () {<cr>}<esc>kf)h
-	iabbrev Cdwhile do {<cr>} while ()<esc>h
+	iabbrev Cdowhile do {<cr>} while ()<esc>h
 	iabbrev Cfor for () {<cr>}<esc>kf)h
 endfunction
 
