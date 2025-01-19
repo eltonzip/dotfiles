@@ -95,7 +95,7 @@ augroup END
 " Python stuff
 function! EltonzipPythonAbbr()
 	iabbrev Pdef def ():<esc>hhh
-	iabbrev Pmain if __name__ == "__main__":
+	iabbrev Pmain if __name__ == "__main__":<esc>
 endfunction
 
 augroup python
@@ -105,9 +105,8 @@ augroup END
 
 " Bash stuff
 function! EltonzipBashAbbr()
-	iabbrev Bif if [  ]; then<cr>fi<Esc>kf[l
+	iabbrev Bif if [  ]; then<cr>fi<Esc><<kf[l
 	iabbrev Belif elif [  ]; then<Esc>F]hh
-	iabbrev Bfunction function  {<cr>}<Esc>kt{h
 endfunction
 
 augroup shell
