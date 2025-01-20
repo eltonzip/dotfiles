@@ -29,7 +29,6 @@ endif
 
 " Colors
 syntax on
-colorscheme evening
 
 " Keymaps
 let mapleader = " "
