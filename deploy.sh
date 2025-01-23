@@ -11,14 +11,16 @@ if [ $(lsb_release -is) == 'Arch' ]; then
 		libreoffice gimp obs-studio htop
 elif [ $(lsb_release -is) == 'Debian' ]; then
 	sudo apt install alacritty tmux ranger mpv vim ripgrep \
-		i3 xorg dunst xfce4-power-manager firefox pavucontrol \
+		i3 xorg dunst xfce4-power-manager firefox-esr pavucontrol \
 		flameshot dmenu \
-		ctags \
+		ctags htop \
 		pipewire pipewire-alas pipewire-pulse \
 		zathura fonts-noto fonts-noto-cjk \
-		libreoffice gimp obs htop
+		flatpak
+
+	sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 fi
-# Nerd Fonts need to be installed manually for Debian systems
+# Nerd Fonts need to be installed manually on Debian systems
 
 cp bashrc $HOME/.bashrc
 cp Scripts $HOME/ -r
