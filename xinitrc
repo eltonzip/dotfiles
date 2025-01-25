@@ -11,9 +11,6 @@
 xrandr --output eDP-1 --off
 xrandr --rate 120
 xset r rate 240 45
-pipewire &
-pipewire-pulse &
-wireplumber &
 setxkbmap -model pc104 -layout us,ru -variant ,, -option grp:toggle &
 
 exec dbus-run-session i3

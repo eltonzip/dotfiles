@@ -10,15 +10,15 @@ if [ $(lsb_release -is) == 'Arch' ]; then
 		ttf-hack-nerd noto-fonts noto-fonts-cjk \
 		libreoffice gimp obs-studio htop
 elif [ $(lsb_release -is) == 'Debian' ]; then
-	sudo apt install -y alacritty tmux ranger mpv vim ripgrep \
+	doas apt install -y alacritty tmux ranger mpv vim ripgrep \
 		i3 xorg dunst xfce4-power-manager firefox-esr pavucontrol \
 		flameshot dmenu \
-		ctags htop \
-		pipewire pipewire-alas pipewire-pulse \
+		universal-ctags htop \
+		pipewire-audio \
 		zathura fonts-noto fonts-noto-cjk \
 		flatpak
 
-	sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+	doas flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 fi
 # Nerd Fonts need to be installed manually on Debian systems
 
