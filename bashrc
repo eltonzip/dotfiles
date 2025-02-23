@@ -117,7 +117,7 @@ fi
 ### My stuff
 
 ## More handy bin
-export PATH=$PATH:/sbin:/usr/sbin:$HOME/.bin
+export PATH=$PATH:$HOME/.bin
 
 ## Prompt
 PS1='\[\033[01;34m\]\u\[\033[00m\] \[\033[01;32m\]\w\[\033[00m\] (\h)\n$? \[\033[01;33m\]>\[\033[00m\] '
@@ -142,7 +142,7 @@ alias pgnu="ping gnu.org"
 alias du="du -h"
 alias free="free -h"
 alias cal="ncal -Mb"
-alias cache-clean="doas sh -c 'echo 3 >  /proc/sys/vm/drop_caches'"
+alias cache-clean="sudo sh -c 'echo 3 >  /proc/sys/vm/drop_caches'"
 
 # dev
 alias pvenv="source $HOME/.venv/bin/activate"
@@ -150,5 +150,5 @@ alias devpy="source $HOME/.venv/bin/activate && cd $HOME/Programming/python"
 alias ctags="ctags -R --kinds-C=+DLpxzl --kinds-C++=+ADLNUZpxzl --kinds-Python=+lz --fields=+iaS --extras=+q"
 
 # other
-alias Sleep="systemctl suspend"
+alias Sleep="systemctl suspend && i3lock"
 MAILCHECK=-1
