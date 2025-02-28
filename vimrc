@@ -47,7 +47,7 @@ nnoremap <silent> <C-l> :nohl<cr><C-l>
 nnoremap <C-p> O<Esc>
 
 nnoremap <leader>mp :set makeprg=
-nnoremap <leader>mm :execute "make \| copen"<cr>
+nnoremap <leader>mm :execute "make"<cr>
 
 nnoremap <silent> <leader>ke :set keymap=""<cr>
 nnoremap <silent> <leader>kr :set keymap=russian-jcukenwin<cr>
@@ -120,17 +120,6 @@ else
 	set grepprg=grep\ -rn
 endif
 
-function! EltonzipGrepPrompt()
-	let pattern = input('Pattern: ')
-
-	if pattern == expand("<Esc>") || pattern == expand("<cr>")
-		return 0
-	endif
-
-	execute "grep ".pattern
-	copen
-endfunction
-
 function! EltonzipGrep(num)
 	if !a:num
 		grep <cword>
@@ -143,7 +132,6 @@ function! EltonzipGrep(num)
 	copen
 endfunction
 
-nnoremap <leader>rp :call EltonzipGrepPrompt()<cr>
 nnoremap <leader>mr :call EltonzipGrep(0)<cr>
 nnoremap <leader>ms :call EltonzipGrep(1)<cr>
 nnoremap <leader>mb :call EltonzipGrep(2)<cr>
