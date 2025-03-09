@@ -1,7 +1,6 @@
 " Options
 set nocompatible
 set noshowmode
-set laststatus=2
 set wildmenu
 
 set noswapfile
