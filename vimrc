@@ -1,6 +1,5 @@
 " Options
 set nocompatible
-set noshowmode
 set wildmenu
 
 set noswapfile
