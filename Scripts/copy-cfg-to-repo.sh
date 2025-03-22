@@ -1,7 +1,6 @@
 #!/bin/env bash
 
 cp $HOME/.bashrc $HOME/dotfiles/bashrc
-cp $HOME/.xinitrc $HOME/dotfiles/xinitrc
 cp $HOME/.vimrc $HOME/dotfiles/vimrc
 cp $HOME/.config/nvim/* $HOME/dotfiles/nvim
 cp $HOME/.config/tmux/* $HOME/dotfiles/tmux

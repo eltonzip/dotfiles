@@ -1,3 +1,6 @@
+## Variables 
+export MOZ_ENABLE_WAYLAND=1 # for Tor Browser to run natively for wayland
+
 ## Prompt
 PS1='\[\033[01;34m\]\u\[\033[00m\] \[\033[01;32m\]\w\[\033[00m\] (\h)\n$? \[\033[01;33m\]>\[\033[00m\] '
 

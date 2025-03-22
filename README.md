@@ -8,11 +8,10 @@
 - Vim
 	- ripgrep
 	- ctags
-- i3
-	- Hack Nerd Font
+- Sway
 	- Pipewire
 	- Any terminal emulator
-	- dunst
+	- mako
 	- xfce4-power-manager
 	- firefox
 	- pavucontrol

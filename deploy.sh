@@ -2,8 +2,9 @@
 
 if [ $(lsb_release -is) == 'Arch' ]; then
 	sudo pacman -S alacritty tmux ranger mpv vim ripgrep \
-		i3 xorg xorg-xinit xorg-server dunst xfce4-power-manager firefox  pavucontrol \
-		flameshot dmenu feh \
+		sway swaylock swayidle swaybg \
+		mako xfce4-power-manager firefox  pavucontrol \
+		flameshot wmenu imv \
 		ctags \
 		pipewire pipewire-alsa pipewire-pulse \
 		zathura \
@@ -11,8 +12,9 @@ if [ $(lsb_release -is) == 'Arch' ]; then
 		libreoffice gimp obs-studio htop
 elif [ $(lsb_release -is) == 'Debian' ]; then
 	doas apt install -y alacritty tmux ranger mpv vim ripgrep \
-		i3 xorg dunst xfce4-power-manager firefox-esr pavucontrol \
-		flameshot dmenu feh \
+		mako xfce4-power-manager firefox-esr pavucontrol \
+		sway # I'll work on that later
+		flameshot wmenu imv \
 		universal-ctags htop \
 		pipewire-audio \
 		zathura fonts-noto fonts-noto-cjk \
@@ -26,10 +28,9 @@ cp bashrc $HOME/.bashrc
 cp Scripts $HOME/ -r
 
 cp vimrc $HOME/.vimrc
-cp xinitrc $HOME/.xinitrc
 cp nvim $HOME/.config/ -r
 cp tmux $HOME/.config/ -r
-cp i3 $HOME/.config/ -r
+cp sway $HOME/.config/ -r
 cp i3status $HOME/.config/ -r
 cp alacritty $HOME/.config/ -r
 cp zathura $HOME/.config/ -r
