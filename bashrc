@@ -36,7 +36,7 @@ alias devpy="source $HOME/.venv/bin/activate && cd $HOME/Programming/python"
 alias ctags="ctags -R --kinds-C=+DLpxzl --kinds-C++=+ADLNUZpxzl --kinds-Python=+lz --fields=+iaS --extras=+q"
 
 # other
-alias Sleep="systemctl suspend && swaylock"
+alias Sleep="systemctl suspend && swaylock -e"
 alias Poweroff="rm $HOME/.bash_history && poweroff"
 alias Reboot="rm $HOME/.bash_history && reboot"
 alias Upd-off="sudo pacman -Syyu --noconfirm && Poweroff"
