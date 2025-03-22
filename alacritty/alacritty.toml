@@ -3,7 +3,7 @@ general.import = [
 ]
 
 [font]
-size = 14
+size = 15
 
 [font.normal]
 family = "Hack Nerd Font"
