@@ -2,7 +2,7 @@
 
 if [ $(lsb_release -is) == 'Arch' ]; then
 	sudo pacman -S alacritty tmux ranger mpv vim ripgrep \
-		sway swaylock swayidle swaybg \
+		sway swaylock swayidle swaybg i3status \
 		mako xfce4-power-manager firefox  pavucontrol \
 		flameshot wmenu imv \
 		ctags \
