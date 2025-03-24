@@ -52,14 +52,6 @@ nnoremap <silent> <leader>kr :set keymap=russian-jcukenwin<cr>
 
 nnoremap <leader>cx :!chmod +x %<cr>
 
-" Find
-if executable('fzf')
-	nnoremap <leader>ff :FZF -e --walker=file,dir<cr>
-else
-	set path+=**
-	nnoremap <leader>ff :find ./
-endif
-
 function! EltonzipFind(num)
 	if !a:num
 		nnoremap <leader>ff :FZF -e --walker=file,dir<cr>

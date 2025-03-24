@@ -27,6 +27,7 @@ alias cal="ncal -Mb"
 alias cache-clean="sudo sh -c 'echo 3 >  /proc/sys/vm/drop_caches'"
 alias ls="ls --color=auto"
 alias grep="grep -n --color=auto"
+alias zgrep="zgrep -n --color=auto"
 alias fgrep="fgrep -n --color=auto"
 alias egrep="egrep -n --color=auto"
 
