@@ -13,7 +13,7 @@
 	- Any terminal emulator
 	- mako
 	- xfce4-power-manager
-	- chromium
+	- Firefox
 	- pavucontrol
 - Zathura
 

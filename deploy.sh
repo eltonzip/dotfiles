@@ -3,7 +3,7 @@
 if [ $(lsb_release -is) == 'Arch' ]; then
 	sudo pacman -S alacritty tmux ranger mpv vim ripgrep \
 		sway swaylock swayidle swaybg i3status \
-		mako xfce4-power-manager chromium  pavucontrol \
+		mako xfce4-power-manager firefox  pavucontrol \
 		flameshot wmenu imv \
 		ctags \
 		pipewire pipewire-alsa pipewire-pulse \
@@ -12,7 +12,7 @@ if [ $(lsb_release -is) == 'Arch' ]; then
 		libreoffice gimp obs-studio htop
 elif [ $(lsb_release -is) == 'Debian' ]; then
 	doas apt install -y alacritty tmux ranger mpv vim ripgrep \
-		mako xfce4-power-manager chromium-esr pavucontrol \
+		mako xfce4-power-manager firefox-esr pavucontrol \
 		sway # I'll work on that later
 		flameshot wmenu imv \
 		universal-ctags htop \

@@ -1,4 +1,4 @@
-## Variables 
+## Variables
 export MOZ_ENABLE_WAYLAND=1 # for Tor Browser to run natively in wayland
 
 ## Prompt
