@@ -117,3 +117,4 @@ include ./launcher_mode.conf
 include ./classes.conf
 include ./input.conf
 include ./output.conf
+include ./screenshot.conf

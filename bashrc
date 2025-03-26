@@ -40,6 +40,9 @@ alias ctags="ctags -R --kinds-C=+DLpxzl --kinds-C++=+ADLNUZpxzl --kinds-Python=+
 alias Jupd="sudo pacman -Syyu --noconfirm"
 alias Upd-off="sudo pacman -Syyu --noconfirm && Poweroff"
 
+# Sway
+alias Sway="$HOME/Scripts/sway.sh"
+
 # other
 alias Sleep="systemctl suspend && swaylock -e"
 alias Poweroff="rm $HOME/.bash_history && poweroff"
