@@ -43,6 +43,11 @@ alias Upd-off="sudo pacman -Syyu --noconfirm && Poweroff"
 # Sway
 alias Sway="$HOME/Scripts/sway.sh"
 
+# iwd
+alias wifi-scan="iwctl station wlan0 scan"
+alias wifi-connect="iwctl station wlan0 connect"
+alias wifi-disconnect="iwctl station wlan0 disconnect"
+
 # other
 alias Sleep="systemctl suspend && swaylock -e"
 alias Poweroff="rm $HOME/.bash_history && poweroff"
