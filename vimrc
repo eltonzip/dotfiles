@@ -33,6 +33,9 @@ syntax on
 let mapleader = " "
 let maplocalleader = "\\"
 
+vnoremap <silent> <leader>yy :w !wl-copy<cr>
+nnoremap <silent> <leader>p :.!wl-paste<cr>
+
 nnoremap - :edit .<cr>
 
 nnoremap <leader>ls :ls<cr>:b 
