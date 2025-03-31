@@ -33,7 +33,7 @@ syntax on
 let mapleader = " "
 let maplocalleader = "\\"
 
-vnoremap <silent> <leader>yy :w !wl-copy<cr><cr>
+vnoremap <silent> <leader>yy :'<,'>w !wl-copy<cr><cr>
 nnoremap <silent> <leader>p :.!wl-paste<cr>
 
 nnoremap - :edit .<cr>
@@ -53,16 +53,8 @@ nnoremap <leader>mm :execute "make"<cr>
 nnoremap <silent> <leader>ke :set keymap=""<cr>
 nnoremap <silent> <leader>kr :set keymap=russian-jcukenwin<cr>
 
-nnoremap <leader>cx :!chmod +x %<cr>
-
-function! EltonzipFind(num)
-	if !a:num
-		nnoremap <leader>ff :FZF -e --walker=file,dir<cr>
-	elseif a:num
-		set path+=**
-		nnoremap <leader>ff :find ./
-	endif
-endfunction
+set path+=**
+nnoremap <leader>ff :find ./
 
 nnoremap <silent> <leader>mz :call EltonzipFind(0)<cr>
 nnoremap <silent> <leader>mf :call EltonzipFind(1)<cr>
@@ -74,7 +66,9 @@ let c_syntax_for_h = 1
 
 function! EltonzipCAbbr()
 	iabbrev Cmain int main(int argc, char *argv[])<cr>{<cr>}<esc>k
-	iabbrev Cdowhile do {<cr>} while ();<esc>hh
+	iabbrev Cdowhile do {<cr>} while ();<esc>F(
+	iabbrev Cif if () {<cr>}<esc>kf(
+	iabbrev Cfor for () {<cr>}<esc>kf(
 endfunction
 
 augroup ccpp
@@ -107,22 +101,16 @@ augroup END
 let g:netrw_banner = 0
 
 " Grep
-if executable('rg')
-	set grepprg=rg\ --vimgrep\ --no-heading\ --smart-case\ --iglob=!tags
-else
-	set grepprg=grep\ -rn
-endif
+set grepprg=grep\ -Hn
 
 function! EltonzipGrep(num)
 	if !a:num
-		grep <cword>
+		grep -r <cword> --exclude={tags,Makefile,compile_commands.json,*.o}
 	elseif a:num == 1
-		grep <cword> src/
+		grep -r <cword> src --exclude={tags,Makefile,compile_commands.json,*.o}
 	else
 		grep <cword> %
 	endif
-
-	copen
 endfunction
 
 nnoremap <leader>mr :call EltonzipGrep(0)<cr>
