@@ -16,6 +16,8 @@ set smartcase
 
 set mouse=a
 
+set path+=**
+
 " Tabs
 set noexpandtab
 set smarttab
@@ -37,6 +39,9 @@ let maplocalleader = "\\"
 nnoremap - :edit .<cr>
 
 nnoremap <leader>ls :ls<cr>:b 
+nnoremap <silent> <leader>bn :bn<cr>
+nnoremap <silent> <leader>bp :bp<cr>
+nnoremap <silent> <leader>bd :bd<cr>
 
 nnoremap <silent> <C-j> :cnext<cr>
 nnoremap <silent> <C-k> :cprevious<cr>
@@ -46,16 +51,10 @@ nnoremap <silent> <C-l> :nohl<cr><C-l>
 nnoremap <C-p> O<Esc>
 
 nnoremap <leader>mp :set makeprg=
-nnoremap <leader>mm :execute "make"<cr>
+nnoremap <leader>mm :make<cr>
 
 nnoremap <silent> <leader>ke :set keymap=""<cr>
 nnoremap <silent> <leader>kr :set keymap=russian-jcukenwin<cr>
-
-set path+=**
-nnoremap <leader>ff :find ./
-
-nnoremap <silent> <leader>mz :call EltonzipFind(0)<cr>
-nnoremap <silent> <leader>mf :call EltonzipFind(1)<cr>
 
 nnoremap <silent> <leader>fl <C-w><C-n><Esc>:.!find -type f<cr>
 
