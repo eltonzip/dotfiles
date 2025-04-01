@@ -1,5 +1,6 @@
 " Options
 set nocompatible
+set showcmd
 set wildmenu
 
 set noswapfile
