@@ -28,7 +28,6 @@ cp bashrc $HOME/.bashrc
 cp Scripts $HOME/ -r
 
 cp vimrc $HOME/.vimrc
-cp nvim $HOME/.config/ -r
 cp tmux $HOME/.config/ -r
 cp sway $HOME/.config/ -r
 cp i3status $HOME/.config/ -r
