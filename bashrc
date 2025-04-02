@@ -24,7 +24,7 @@ alias pgnu="ping gnu.org"
 alias du="du -h"
 alias free="free -h"
 alias cal="ncal -Mb"
-alias cache-clean="sudo sh -c 'echo 3 >  /proc/sys/vm/drop_caches'"
+alias cache-clean="sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'"
 alias ls="ls --color=auto"
 alias grep="grep -n --color=auto"
 alias zgrep="zgrep -n --color=auto"
@@ -37,8 +37,8 @@ alias devpy="source $HOME/.venv/bin/activate && cd $HOME/Programming/python"
 alias ctags="ctags -R --kinds-C=+DLpxzl --kinds-C++=+ADLNUZpxzl --kinds-Python=+lz --fields=+iaS --extras=+q"
 
 # pacman
-alias Jupd="sudo pacman -Syyu --noconfirm"
-alias Upd-off="sudo pacman -Syyu --noconfirm && Poweroff"
+alias Jupd="sudo pacman -Syu --noconfirm"
+alias Upd-off="sudo pacman -Syu --noconfirm && Poweroff"
 
 # Sway
 alias Sway="$HOME/Scripts/sway.sh"
