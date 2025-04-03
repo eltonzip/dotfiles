@@ -43,6 +43,9 @@ nnoremap <silent> <leader>bn :bn<cr>
 nnoremap <silent> <leader>bp :bp<cr>
 nnoremap <silent> <leader>bd :bd<cr>
 
+nnoremap <leader>ff :find 
+nnoremap <leader>gg :grep 
+
 nnoremap <silent> <C-j> :cnext<cr>
 nnoremap <silent> <C-k> :cprevious<cr>
 
@@ -55,8 +58,6 @@ nnoremap <leader>mm :make<cr>
 
 nnoremap <silent> <leader>ke :set keymap=""<cr>
 nnoremap <silent> <leader>kr :set keymap=russian-jcukenwin<cr>
-
-nnoremap <silent> <leader>fl <C-w><C-n><Esc>:.!find -type f<cr>
 
 " C/C++ stuff
 let c_syntax_for_h = 1
