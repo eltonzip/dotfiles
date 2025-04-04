@@ -2,7 +2,7 @@
 export MOZ_ENABLE_WAYLAND=1 # for Tor Browser to run natively in wayland
 
 ## Prompt
-PS1='\[\033[01;34m\]\u\[\033[00m\] \[\033[01;32m\]\w\[\033[00m\] (\h)\n$? \[\033[01;33m\]>\[\033[00m\] '
+PS1='\[\033[01;32m\]\w\[\033[00m\]\n$? $ '
 
 ## Aliases
 alias reload="source ~/.bashrc"
