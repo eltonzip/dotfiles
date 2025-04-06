@@ -6,8 +6,9 @@
 - Ranger
 	- mpv
 - Vim
-	- ripgrep
 	- ctags
+- Neovim
+	- Clangd
 - Sway
 	- Pipewire
 	- Any terminal emulator

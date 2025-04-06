@@ -9,7 +9,8 @@ map('n', '<leader>lr', vim.lsp.buf.references)
 map('n', '<leader>lc', vim.lsp.buf.rename)
 
 vim.diagnostic.config({
-	signs = false
+	signs = false,
+	virtual_text = true
 })
 
 vim.api.nvim_create_autocmd('FileType', {
@@ -38,6 +39,7 @@ Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 
 call plug#end()
+colorscheme catppuccin-frappe
 
 lua <<EOF
   local cmp = require'cmp'

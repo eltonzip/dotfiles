@@ -99,7 +99,7 @@ augroup END
 let g:netrw_banner = 0
 
 " Grep
-set grepprg=grep\ -Hn
+set grepprg=grep\ -Hn\ --exclude={tags,Makefile,build.sh,.gitignore}\ --exclude-dir={.cache,.git,vscode}
 
 function! EltonzipGrep(num)
 	if !a:num
