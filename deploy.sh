@@ -27,6 +27,10 @@ fi
 cp bashrc $HOME/.bashrc
 cp Scripts $HOME/ -r
 
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+cp nvim/ $HOME/.config -r
+
 cp vimrc $HOME/.vimrc
 cp tmux $HOME/.config/ -r
 cp sway $HOME/.config/ -r
