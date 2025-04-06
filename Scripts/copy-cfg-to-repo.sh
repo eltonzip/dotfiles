@@ -2,6 +2,7 @@
 
 cp $HOME/.bashrc $HOME/dotfiles/bashrc
 cp $HOME/.vimrc $HOME/dotfiles/vimrc
+cp $HOME/.config/nvim/* $HOME/dotfiles/nvim
 cp $HOME/.config/tmux/* $HOME/dotfiles/tmux
 cp $HOME/.config/sway/* $HOME/dotfiles/sway
 cp $HOME/.config/i3status/* $HOME/dotfiles/i3status
