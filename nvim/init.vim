@@ -11,6 +11,8 @@ set tabstop=4
 let mapleader = " "
 let maplocalleader = "\\"
 
+nnoremap <silent> - :Explore<cr>
+
 nnoremap <leader>ls :ls<cr>:b 
 nnoremap <silent> <leader>bn :bn<cr>
 nnoremap <silent> <leader>bp :bp<cr>
