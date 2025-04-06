@@ -7,8 +7,6 @@
 	- mpv
 - Vim
 	- ctags
-- Neovim
-	- Clangd
 - Sway
 	- Pipewire
 	- Any terminal emulator
