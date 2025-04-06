@@ -36,7 +36,7 @@ syntax on
 let mapleader = " "
 let maplocalleader = "\\"
 
-nnoremap - :edit .<cr>
+nnoremap - :Explore<cr>
 
 nnoremap <leader>ls :ls<cr>:b 
 nnoremap <silent> <leader>bn :bn<cr>
