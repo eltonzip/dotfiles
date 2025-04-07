@@ -22,7 +22,6 @@ function back {
 
 # coreutils
 alias pgnu="ping gnu.org"
-alias du="du -h"
 alias free="free -h"
 alias cal="ncal -Mb"
 alias cache-clean="sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'"
