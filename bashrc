@@ -3,7 +3,7 @@ export MOZ_ENABLE_WAYLAND=1 # for Tor Browser to run natively in wayland
 export EDITOR=vim
 
 ## Prompt
-PS1='\[\033[01;32m\]\w\[\033[00m\]\n$ '
+PS1='$ '
 
 ## Aliases
 alias reload="source ~/.bashrc"
