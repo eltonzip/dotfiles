@@ -9,7 +9,6 @@ set nobackup
 set autoindent
 set smartindent
 
-set hlsearch
 set incsearch
 set ignorecase
 set smartcase
@@ -48,8 +47,6 @@ nnoremap <leader>gg :grep
 
 nnoremap <silent> <C-j> :cnext<cr>
 nnoremap <silent> <C-k> :cprevious<cr>
-
-nnoremap <silent> <C-l> :nohl<cr><C-l>
 
 nnoremap <C-p> O<Esc>
 
