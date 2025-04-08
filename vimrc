@@ -2,7 +2,6 @@
 set nocompatible
 set showcmd
 set wildmenu
-set noshowmode
 
 set noswapfile
 set nobackup
@@ -17,13 +16,6 @@ set smartcase
 set mouse=a
 
 set path+=**
-
-" Cursor
-let &t_SI = "\e[5 q"    " blink bar
-let &t_SR = "\e[3 q"    " blink underline
-let &t_EI = "\e[1 q"    " blink block
-let &t_ti ..= "\e[1 q"  " blink block
-let &t_te ..= "\e[0 q"  " default (depends on terminal, normally blink
 
 " Tabs
 set noexpandtab
