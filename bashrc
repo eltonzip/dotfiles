@@ -30,6 +30,7 @@ alias grep="grep -n --color=auto --exclude={tags,Makefile,build.sh,.gitignore} -
 alias zgrep="zgrep -n --color=auto"
 alias fgrep="fgrep -n --color=auto"
 alias egrep="egrep -n --color=auto"
+alias vi="vim"
 
 # dev
 alias pvenv="source $HOME/.venv/bin/activate"
@@ -37,7 +38,8 @@ alias devpy="source $HOME/.venv/bin/activate && cd $HOME/Programming/python"
 alias ctags="ctags -R --kinds-C=+DLpxzl --kinds-C++=+ADLNUZpxzl --kinds-Python=+lz --fields=+iaS --extras=+q"
 
 # pacman
-alias Jupd="sudo pacman -Syu --noconfirm"
+alias Cupd="sudo pacman -Syu"
+alias Nupd="sudo pacman -Syu --noconfirm"
 alias Upd-off="sudo pacman -Syu --noconfirm && Poweroff"
 
 # Sway
