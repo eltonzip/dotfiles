@@ -34,4 +34,4 @@ cp i3status $HOME/.config/ -r
 cp alacritty $HOME/.config/ -r
 cp zathura $HOME/.config/ -r
 cp ranger $HOME/.config/ -r
-cp Pictures/* $HOME/Pictures/
+cp wallpaper.jpg $HOME/Pictures/

@@ -10,4 +10,4 @@ cp $HOME/.config/alacritty/* $HOME/dotfiles/alacritty
 cp $HOME/.config/zathura/* $HOME/dotfiles/zathura
 cp $HOME/.config/ranger/* $HOME/dotfiles/ranger
 cp $HOME/Scripts/* $HOME/dotfiles/Scripts
-cp $HOME/Pictures/wallpaper* $HOME/dotfiles/Pictures/
+cp $HOME/Pictures/wallpaper.jpg $HOME/dotfiles
