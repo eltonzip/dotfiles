@@ -40,7 +40,7 @@ alias ctags="ctags -R --kinds-C=+DLpxzl --kinds-C++=+ADLNUZpxzl --kinds-Python=+
 # pacman
 alias Cupd="sudo pacman -Syu"
 alias Nupd="sudo pacman -Syu --noconfirm"
-alias Upd-off="sudo pacman -Syu --noconfirm && Poweroff"
+alias Fupd="sudo pacman -Syu --noconfirm && Poweroff"
 
 # Sway
 alias Sway="$HOME/Scripts/sway.sh"
