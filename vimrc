@@ -38,9 +38,6 @@ let maplocalleader = "\\"
 nnoremap - :Explore<cr>
 
 nnoremap <leader>ls :ls<cr>:b 
-nnoremap <silent> <leader>bn :bn<cr>
-nnoremap <silent> <leader>bp :bp<cr>
-nnoremap <silent> <leader>bd :bd<cr>
 
 nnoremap <leader>ff :find 
 nnoremap <leader>gg :grep 
