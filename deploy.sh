@@ -8,21 +8,20 @@ if [ $(lsb_release -is) == 'Arch' ]; then
 		ctags \
 		pipewire pipewire-alsa pipewire-pulse \
 		zathura \
-		ttf-hack-nerd noto-fonts noto-fonts-cjk \
+		ttf-liberation noto-fonts noto-fonts-cjk \
 		libreoffice gimp obs-studio htop
 elif [ $(lsb_release -is) == 'Debian' ]; then
 	doas apt install -y alacritty tmux ranger mpv vim ripgrep \
+		xwayland sway swaylock i3status \
 		mako xfce4-power-manager firefox-esr pavucontrol \
-		xwayland sway # I'll work on that later
 		grim slurp wmenu imv \
 		universal-ctags htop \
 		pipewire-audio \
-		zathura fonts-noto fonts-noto-cjk \
+		zathura fonts-noto fonts-noto-cjk fonts-liberation \
 		flatpak
 
 	doas flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 fi
-# Nerd Fonts need to be installed manually on Debian systems
 
 cp bashrc $HOME/.bashrc
 cp Scripts $HOME/ -r

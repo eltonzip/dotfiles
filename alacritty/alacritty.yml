@@ -33,7 +33,7 @@ colors:
         white: '#63686d'
 
 font:
-    size: 14
+    size: 16
     normal:
-        family: "Hack Nerd Font"
+        family: "Liberation Mono"
         style: "Regular"

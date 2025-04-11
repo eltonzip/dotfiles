@@ -3,8 +3,8 @@ general.import = [
 ]
 
 [font]
-size = 15
+size = 16
 
 [font.normal]
-family = "Hack Nerd Font"
+family = "Liberation Mono"
 style = "Regular"
