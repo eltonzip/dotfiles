@@ -11,8 +11,6 @@ set $term alacritty
 
 set $menu wmenu-run -i
 
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-
 bindsym $mod+Return exec $term
 
 bindsym $mod+Shift+q kill
