@@ -1,6 +1,8 @@
 #!/bin/env bash
 
-if [ $(lsb_release -is) == 'Arch' ]; then
+DISTRO=$(head -n 1 /etc/os-release | grep -o 'Debian\|Arch')
+
+if [ $DISTRO == 'Arch' ]; then
 	sudo pacman -S alacritty tmux ranger mpv vim ripgrep \
 		xorg-xwayland sway swaylock i3status \
 		mako xfce4-power-manager firefox  pavucontrol \
@@ -10,9 +12,9 @@ if [ $(lsb_release -is) == 'Arch' ]; then
 		zathura \
 		ttf-liberation noto-fonts noto-fonts-cjk \
 		libreoffice gimp obs-studio htop
-elif [ $(lsb_release -is) == 'Debian' ]; then
+elif [ $DISTRO == 'Debian' ]; then
 	doas apt install -y alacritty tmux ranger mpv vim ripgrep \
-		xwayland sway swaylock i3status \
+		xwayland sway swaylock i3status xdg-desktop-portal-wlr \
 		mako xfce4-power-manager firefox-esr pavucontrol \
 		grim slurp wmenu imv \
 		universal-ctags htop \
