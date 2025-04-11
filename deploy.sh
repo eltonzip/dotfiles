@@ -2,7 +2,7 @@
 
 if [ $(lsb_release -is) == 'Arch' ]; then
 	sudo pacman -S alacritty tmux ranger mpv vim ripgrep \
-		xorg-xwayland sway swaylock swaybg i3status \
+		xorg-xwayland sway swaylock i3status \
 		mako xfce4-power-manager firefox  pavucontrol \
 		grim slurp wmenu imv \
 		ctags \
@@ -34,4 +34,3 @@ cp i3status $HOME/.config/ -r
 cp alacritty $HOME/.config/ -r
 cp zathura $HOME/.config/ -r
 cp ranger $HOME/.config/ -r
-cp wallpaper.jpg $HOME/Pictures/
