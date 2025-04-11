@@ -1,4 +1,4 @@
-font pango:Hack Nerd Font Mono 9
+font pango:Liberation Mono 10
 
 set $mod Mod4
 
