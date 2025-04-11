@@ -6,7 +6,7 @@ if [ $DISTRO == 'Arch' ]; then
 	sudo pacman -S alacritty tmux ranger mpv vim ripgrep \
 		xorg-xwayland sway swaylock i3status \
 		mako xfce4-power-manager firefox  pavucontrol \
-		grim slurp wmenu imv \
+		grim slurp wmenu \
 		ctags \
 		pipewire pipewire-alsa pipewire-pulse \
 		zathura \
@@ -16,7 +16,7 @@ elif [ $DISTRO == 'Debian' ]; then
 	doas apt install -y alacritty tmux ranger mpv vim ripgrep \
 		xwayland sway swaylock i3status xdg-desktop-portal-wlr \
 		mako xfce4-power-manager firefox-esr pavucontrol \
-		grim slurp wmenu imv \
+		grim slurp wmenu \
 		universal-ctags htop \
 		pipewire-audio \
 		zathura fonts-noto fonts-noto-cjk fonts-liberation \
