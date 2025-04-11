@@ -61,9 +61,6 @@ let c_syntax_for_h = 1
 
 function! EltonzipCAbbr()
 	iabbrev Cmain int main(int argc, char *argv[])<cr>{<cr>}<esc>k
-	iabbrev Cdowhile do {<cr>} while ();<esc>F(
-	iabbrev Cif if () {<cr>}<esc>kf(
-	iabbrev Cfor for () {<cr>}<esc>kf(
 endfunction
 
 augroup ccpp
@@ -83,8 +80,8 @@ augroup END
 
 " Bash stuff
 function! EltonzipBashAbbr()
-	iabbrev Bif if [[  ]]; then<cr>fi<Esc><<kf[ll
-	iabbrev Belif elif [  ]; then<Esc>F]hh
+	iabbrev Bif if [[  ]]; then<cr>fi<Esc><<k2f[ll
+	iabbrev Belif elif [[  ]]; then<Esc>F]hh
 endfunction
 
 augroup shell
@@ -100,9 +97,9 @@ set grepprg=grep\ -Hn\ --exclude={tags,Makefile,build.sh,.gitignore}\ --exclude-
 
 function! EltonzipGrep(num)
 	if !a:num
-		grep -r <cword> --exclude={tags,Makefile,compile_commands.json,*.o}
+		grep -rn <cword> --exclude={tags,Makefile,compile_commands.json,*.o}
 	elseif a:num == 1
-		grep -r <cword> src --exclude={tags,Makefile,compile_commands.json,*.o}
+		grep -rn <cword> src --exclude={tags,Makefile,compile_commands.json,*.o}
 	else
 		grep <cword> %
 	endif
