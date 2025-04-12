@@ -8,7 +8,7 @@ if [ $DISTRO == 'Arch' ]; then
 		ttf-liberation noto-fonts noto-fonts-cjk \
 		libreoffice gimp obs-studio htop
 elif [ $DISTRO == 'Debian' ]; then
-	sudo apt install -y alacritty tmux universal-ctags \
+	sudo apt install -y build-essential alacritty tmux universal-ctags vim \
 		fonts-noto fonts-noto-cjk fonts-liberation \
 		flatpak
 

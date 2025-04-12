@@ -33,7 +33,7 @@ colors:
         white: '#63686d'
 
 font:
-    size: 16
+    size: 15
     normal:
         family: "Liberation Mono"
         style: "Regular"
