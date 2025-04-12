@@ -37,11 +37,6 @@ alias pvenv="source $HOME/.venv/bin/activate"
 alias devpy="source $HOME/.venv/bin/activate && cd $HOME/Programming/python"
 alias ctags="ctags -R --kinds-C=+DLpxzl --kinds-C++=+ADLNUZpxzl --kinds-Python=+lz --fields=+iaS --extras=+q"
 
-# pacman
-alias Cupd="sudo pacman -Syu"
-alias Nupd="sudo pacman -Syu --noconfirm"
-alias Fupd="sudo pacman -Syu --noconfirm && Poweroff"
-
 # Sway
 alias Sway="$HOME/Scripts/sway.sh"
 
@@ -55,3 +50,8 @@ alias Sleep="systemctl suspend && swaylock -e"
 alias Poweroff="rm $HOME/.bash_history && poweroff"
 alias Reboot="rm $HOME/.bash_history && reboot"
 MAILCHECK=-1
+
+# Apt
+alias Upd="doas apt update"
+alias Upg="doas apt upgrade"
+alias Upf="Upd && Upg && Poweroff"
