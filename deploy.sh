@@ -5,7 +5,7 @@ DISTRO=$(head -n 1 /etc/os-release | grep -o 'Debian\|Arch')
 if [ $DISTRO == 'Arch' ]; then
 	sudo pacman -S alacritty tmux ranger mpv vim ripgrep \
 		xorg-xwayland sway swaylock i3status \
-		mako xfce4-power-manager firefox  pavucontrol \
+		mako firefox  pavucontrol \
 		grim slurp wmenu \
 		ctags \
 		pipewire pipewire-alsa pipewire-pulse \
@@ -14,13 +14,14 @@ if [ $DISTRO == 'Arch' ]; then
 elif [ $DISTRO == 'Debian' ]; then
 	doas apt install -y build-essential alacritty tmux ranger mpv vim ripgrep \
 		xwayland sway swaylock i3status xdg-desktop-portal-wlr wl-clipboard \
-		xfce4-power-manager firefox-esr pavucontrol \
+		dunst firefox-esr pavucontrol \
 		grim slurp rofi \
 		universal-ctags htop \
 		pipewire-audio pipewire-pulse \
 		fonts-noto fonts-noto-cjk fonts-liberation \
 		flatpak
 
+	doas cp doas.conf /etc/
 	mkdir $HOME/Pictures
 	xdg-user-dirs-update --set PICTURES $HOME/Pictures
 	doas flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
