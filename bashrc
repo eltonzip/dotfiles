@@ -1,3 +1,16 @@
+case $- in
+    *i*) ;;
+      *) return;;
+esac
+
+if ! shopt -oq posix; then
+if [ -f /usr/share/bash-completion/bash_completion ]; then
+. /usr/share/bash-completion/bash_completion
+elif [ -f /etc/bash_completion ]; then
+. /etc/bash_completion
+fi
+fi
+
 ## Variables
 export MOZ_ENABLE_WAYLAND=1 # for Tor Browser to run natively in wayland
 export EDITOR=vim
@@ -60,12 +73,3 @@ alias Upf="Upd && Upg -y && Poweroff"
 ## Other stuff
 complete -cf doas
 MAILCHECK=-1
-
-# Bash completion
-if ! shopt -oq posix; then
-if [ -f /usr/share/bash-completion/bash_completion ]; then
-. /usr/share/bash-completion/bash_completion
-elif [ -f /etc/bash_completion ]; then
-. /etc/bash_completion
-fi
-fi
