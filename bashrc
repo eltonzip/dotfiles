@@ -49,10 +49,23 @@ alias wifi-disconnect="iwctl station wlan0 disconnect"
 alias Sleep="systemctl suspend && swaylock -e"
 alias Poweroff="rm $HOME/.bash_history && poweroff"
 alias Reboot="rm $HOME/.bash_history && reboot"
-MAILCHECK=-1
+alias sudo="doas"
 
 # Apt
-alias Upd="doas apt update"
+alias Upd="doas apt update && apt list --upgradable"
 alias Upg="doas apt upgrade"
 alias Upp="Upd && Upg -y"
 alias Upf="Upd && Upg -y && Poweroff"
+
+## Other stuff
+complete -cf doas
+MAILCHECK=-1
+
+# Bash completion
+if ! shopt -oq posix; then
+if [ -f /usr/share/bash-completion/bash_completion ]; then
+. /usr/share/bash-completion/bash_completion
+elif [ -f /etc/bash_completion ]; then
+. /etc/bash_completion
+fi
+fi
