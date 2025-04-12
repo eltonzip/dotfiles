@@ -9,13 +9,15 @@ set $right l
 
 set $term alacritty
 
+set $menu-desktop rofi -show drun
 set $menu rofi -show run
 
 bindsym $mod+Return exec $term
 
 bindsym $mod+Shift+q kill
 
-bindsym $mod+p exec $menu
+bindsym $mod+p exec $menu-desktop
+bindsym $mod+Shift+p exec $menu
 
 floating_modifier $mod normal
 
