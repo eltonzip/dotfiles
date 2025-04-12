@@ -54,4 +54,5 @@ MAILCHECK=-1
 # Apt
 alias Upd="doas apt update"
 alias Upg="doas apt upgrade"
-alias Upf="Upd && Upg && Poweroff"
+alias Upp="Upd && Upg -y"
+alias Upf="Upd && Upg -y && Poweroff"
