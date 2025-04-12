@@ -1,7 +1,7 @@
 # My dotfiles
 ## Requirements:
 - Alacritty
-	- Hack Nerd Font
+	- Liberation font
 - tmux
 - Ranger
 	- mpv
@@ -9,12 +9,9 @@
 	- ctags
 - Sway
 	- Pipewire
-	- Any terminal emulator
-	- mako
-	- xfce4-power-manager
-	- Firefox
+	- dunst
 	- pavucontrol
-- Zathura
+- Firefox
 
 ## Deployment:
-Execute `deploy.sh`, requires bash.
+Execute `deploy.sh` on Debian (works well on Bookworm).
