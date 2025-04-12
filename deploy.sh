@@ -9,7 +9,6 @@ if [ $DISTRO == 'Arch' ]; then
 		grim slurp wmenu \
 		ctags \
 		pipewire pipewire-alsa pipewire-pulse \
-		zathura \
 		ttf-liberation noto-fonts noto-fonts-cjk \
 		libreoffice gimp obs-studio htop
 elif [ $DISTRO == 'Debian' ]; then
@@ -19,7 +18,7 @@ elif [ $DISTRO == 'Debian' ]; then
 		grim slurp rofi \
 		universal-ctags htop \
 		pipewire-audio pipewire-pulse \
-		zathura fonts-noto fonts-noto-cjk fonts-liberation \
+		fonts-noto fonts-noto-cjk fonts-liberation \
 		flatpak
 
 	mkdir $HOME/Pictures
@@ -36,5 +35,4 @@ cp tmux $HOME/.config/ -r
 cp sway $HOME/.config/ -r
 cp i3status $HOME/.config/ -r
 cp alacritty $HOME/.config/ -r
-cp zathura $HOME/.config/ -r
 cp ranger $HOME/.config/ -r
