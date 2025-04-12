@@ -13,15 +13,17 @@ if [ $DISTRO == 'Arch' ]; then
 		ttf-liberation noto-fonts noto-fonts-cjk \
 		libreoffice gimp obs-studio htop
 elif [ $DISTRO == 'Debian' ]; then
-	doas apt install -y alacritty tmux ranger mpv vim ripgrep \
-		xwayland sway swaylock i3status xdg-desktop-portal-wlr \
-		mako xfce4-power-manager firefox-esr pavucontrol \
-		grim slurp wmenu \
+	doas apt install -y build-essential alacritty tmux ranger mpv vim ripgrep \
+		xwayland sway swaylock i3status xdg-desktop-portal-wlr wl-clipboard \
+		xfce4-power-manager firefox-esr pavucontrol \
+		grim slurp rofi \
 		universal-ctags htop \
-		pipewire-audio \
+		pipewire-audio pipewire-pulse \
 		zathura fonts-noto fonts-noto-cjk fonts-liberation \
 		flatpak
 
+	mkdir $HOME/Pictures
+	xdg-user-dirs-update --set PICTURES $HOME/Pictures
 	doas flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 fi
 

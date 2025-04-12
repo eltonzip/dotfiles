@@ -9,7 +9,7 @@ set $right l
 
 set $term alacritty
 
-set $menu wmenu-run -i
+set $menu rofi -show run
 
 bindsym $mod+Return exec $term
 
