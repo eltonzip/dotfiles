@@ -4,7 +4,7 @@ su --command='apt install opendoas && cp doas.conf /etc/' root
 
 doas apt install -y build-essential alacritty tmux ranger mpv vim ripgrep \
 	xwayland sway swaylock i3status xdg-desktop-portal-wlr wl-clipboard \
-	dunst firefox-esr pavucontrol \
+	mako-notifier firefox-esr pavucontrol \
 	grim slurp rofi \
 	universal-ctags htop \
 	pipewire-audio pipewire-pulse \
