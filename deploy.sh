@@ -9,7 +9,6 @@ doas apt install -y build-essential alacritty tmux ranger mpv vim ripgrep \
 	universal-ctags htop \
 	pipewire-audio pipewire-pulse \
 	fonts-noto fonts-noto-cjk fonts-liberation \
-	flatpak
 
 mkdir $HOME/.config
 
@@ -25,5 +24,3 @@ cp sway $HOME/.config/ -r
 cp i3status $HOME/.config/ -r
 cp alacritty $HOME/.config/ -r
 cp ranger $HOME/.config/ -r
-
-doas flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
