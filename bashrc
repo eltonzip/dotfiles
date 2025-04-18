@@ -44,6 +44,7 @@ alias zgrep="zgrep --color=auto"
 alias fgrep="fgrep --color=auto"
 alias egrep="egrep --color=auto"
 alias vi="vim"
+alias nvim="$HOME/Opt/nvim-linux-x86_64/bin/nvim"
 
 # dev
 alias pvenv="source $HOME/.venv/bin/activate"

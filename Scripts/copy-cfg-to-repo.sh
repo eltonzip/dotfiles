@@ -9,3 +9,4 @@ cp $HOME/Scripts/* $HOME/dotfiles/Scripts/
 cp $HOME/.config/sway/* $HOME/dotfiles/sway/
 cp $HOME/.config/i3status/* $HOME/dotfiles/i3status/
 cp $HOME/.config/ranger/* $HOME/dotfiles/ranger/
+cp $HOME/.config/nvim/* $HOME/dotfiles/nvim/
