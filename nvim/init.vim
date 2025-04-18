@@ -35,6 +35,7 @@ Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 call plug#end()
 
 colo catppuccin-frappe
+set makeprg=bear\ --\ make
 
 lua <<EOF
   local cmp = require'cmp'
