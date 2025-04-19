@@ -64,6 +64,9 @@ alias Sleep="systemctl suspend && swaylock -e"
 alias Poweroff="rm $HOME/.bash_history && poweroff"
 alias Reboot="rm $HOME/.bash_history && reboot"
 alias sudo="doas"
+function ez-tmux {
+	tmux new-session -c . -s $(pwd | rev | cut '-d/' -f1 | rev)
+}
 
 # Apt
 alias Upd="doas apt update && apt list --upgradable"
