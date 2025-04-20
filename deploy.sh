@@ -5,6 +5,7 @@ su --command='apt install opendoas && cp doas.conf /etc/' root
 doas apt install -y build-essential alacritty tmux ranger mpv vim ripgrep \
 	xwayland sway swaylock i3status xdg-desktop-portal-wlr wl-clipboard \
 	mako-notifier firefox-esr pavucontrol \
+	zathura zathura-pdf-poppler zathura-djvu \
 	grim slurp rofi \
 	universal-ctags htop \
 	pipewire-audio pipewire-pulse \
@@ -24,3 +25,4 @@ cp sway $HOME/.config/ -r
 cp i3status $HOME/.config/ -r
 cp alacritty $HOME/.config/ -r
 cp ranger $HOME/.config/ -r
+cp zathura $HOME/.config/ -r

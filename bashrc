@@ -68,8 +68,8 @@ function ez-tmux {
 }
 
 # Apt
-alias Upd="doas apt update && apt list --upgradable"
-alias Upg="doas apt upgrade"
+alias Upd="sudo apt update && apt list --upgradable"
+alias Upg="sudo apt upgrade"
 alias Upp="Upd && Upg -y"
 alias Upf="Upd && Upg -y && Poweroff"
 
