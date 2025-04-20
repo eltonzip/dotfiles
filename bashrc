@@ -12,7 +12,6 @@ fi
 fi
 
 ## Variables
-export MOZ_ENABLE_WAYLAND=1 # for Tor Browser to run natively in wayland
 export EDITOR=vim
 
 ## Prompt
