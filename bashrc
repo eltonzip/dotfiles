@@ -62,7 +62,7 @@ alias vi="vim"
 alias nvim="$HOME/Opt/nvim-linux-x86_64/bin/nvim"
 
 # dev
-alias ctags="ctags -R --kinds-C=+DLpxzl --kinds-C++=+ADLNUZpxzl --kinds-Python=+lz --fields=+iaS --extras=+q"
+alias ctags="ctags -R --kinds-C=+DLgpxzl --kinds-C++=+ADgLNUZpxzl --kinds-Python=+lz --fields=+iaS --extras=+q"
 alias pvenv="source $HOME/.venv/bin/activate"
 alias devpy="source $HOME/.venv/bin/activate && cd $HOME/Programming/python"
 
