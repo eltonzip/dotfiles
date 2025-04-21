@@ -28,8 +28,24 @@ function cdto {
 	cd $(cat $HOME/.cdbuff)
 }
 
-function back {
-	mv "${1}" "${1}~"
+function mv-ez {
+	find . -maxdepth 1 -name "${1}*" | grep '~' &>/dev/null
+
+	if [[ $? != 0 ]]; then
+		mv $1 "${1}~"
+	else
+		mv "${1}~" $(echo $1 | cut '-d~' -f1)
+	fi
+}
+
+function cp-ez {
+	find . -maxdepth 1 -name "${1}*" | grep '~' &>/dev/null
+
+	if [[ $? != 0 ]]; then
+		cp $1 "${1}~"
+	else
+		cp "${1}~" $(echo $1 | cut '-d~' -f1)
+	fi
 }
 
 # coreutils
@@ -46,9 +62,9 @@ alias vi="vim"
 alias nvim="$HOME/Opt/nvim-linux-x86_64/bin/nvim"
 
 # dev
+alias ctags="ctags -R --kinds-C=+DLpxzl --kinds-C++=+ADLNUZpxzl --kinds-Python=+lz --fields=+iaS --extras=+q"
 alias pvenv="source $HOME/.venv/bin/activate"
 alias devpy="source $HOME/.venv/bin/activate && cd $HOME/Programming/python"
-alias ctags="ctags -R --kinds-C=+DLpxzl --kinds-C++=+ADLNUZpxzl --kinds-Python=+lz --fields=+iaS --extras=+q"
 
 # Sway
 alias Sway="$HOME/Scripts/sway.sh"
@@ -63,6 +79,7 @@ alias Sleep="systemctl suspend && swaylock -e"
 alias Poweroff="rm $HOME/.bash_history && poweroff"
 alias Reboot="rm $HOME/.bash_history && reboot"
 alias sudo="doas"
+
 function ez-tmux {
 	tmux new-session -s $(pwd | rev | cut '-d/' -f1 | rev)
 }
@@ -74,5 +91,4 @@ alias Upp="Upd && Upg -y"
 alias Upf="Upd && Upg -y && Poweroff"
 
 ## Other stuff
-complete -cf doas
 MAILCHECK=-1
