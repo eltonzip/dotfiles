@@ -9,6 +9,9 @@ vim.diagnostic.config {
 
 vim.keymap.set('n', '<leader>lr', vim.lsp.buf.references)
 vim.keymap.set('n', '<leader>lc', vim.lsp.buf.rename)
+vim.keymap.set('n', '<leader>lc', vim.lsp.buf.rename)
+vim.keymap.set('n', '<leader>ls', vim.lsp.buf.document_symbol)
+
 
 vim.lsp.config['clangd'] = {
 	cmd = {'clangd', '--background-index', '--clang-tidy', '--log=verbose'},
@@ -86,3 +89,8 @@ lua <<EOF
     capabilities = capabilities
   }
 EOF
+
+imap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'
+smap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'
+imap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'
+smap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'
