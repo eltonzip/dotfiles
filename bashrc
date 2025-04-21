@@ -28,7 +28,7 @@ function cdto {
 	cd $(cat $HOME/.cdbuff)
 }
 
-function mv-ez {
+function ez-mv {
 	find . -maxdepth 1 -name "${1}*" | grep '~' &>/dev/null
 
 	if [[ $? != 0 ]]; then
@@ -38,7 +38,7 @@ function mv-ez {
 	fi
 }
 
-function cp-ez {
+function ez-cp {
 	find . -maxdepth 1 -name "${1}*" | grep '~' &>/dev/null
 
 	if [[ $? != 0 ]]; then
