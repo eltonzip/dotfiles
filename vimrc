@@ -2,6 +2,7 @@
 set nocompatible
 set showcmd
 set wildmenu
+set background=dark
 
 set noswapfile
 set nobackup

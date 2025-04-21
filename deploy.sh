@@ -17,12 +17,12 @@ mkdir $HOME/Pictures
 xdg-user-dirs-update --set PICTURES $HOME/Pictures
 
 cp bashrc $HOME/.bashrc
-cp Scripts $HOME/ -r
+cp -r Scripts $HOME/
 cp vimrc $HOME/.vimrc
 cp gitconfig $HOME/.gitconfig
-cp tmux $HOME/.config/ -r
-cp sway $HOME/.config/ -r
-cp i3status $HOME/.config/ -r
-cp alacritty $HOME/.config/ -r
-cp ranger $HOME/.config/ -r
-cp zathura $HOME/.config/ -r
+cp -r tmux $HOME/.config/
+cp -r sway $HOME/.config/
+cp -r i3status $HOME/.config/
+cp -r alacritty $HOME/.config/
+cp -r ranger $HOME/.config/
+cp -r zathura $HOME/.config/
