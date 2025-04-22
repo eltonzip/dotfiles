@@ -32,7 +32,6 @@ function cdto {
 alias pgnu="ping gnu.org"
 alias free="free -h"
 alias cal="ncal -Mb"
-alias cache-clean="sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'"
 alias ls="ls --color=auto"
 alias grep="grep --color=auto --exclude={tags,Makefile,build.sh,.gitignore} --exclude-dir={.cache,.git,.vscode}"
 alias zgrep="zgrep --color=auto"
@@ -49,16 +48,10 @@ alias devpy="source $HOME/.venv/bin/activate && cd $HOME/Programming/python"
 # Sway
 alias Sway="$HOME/Scripts/sway.sh"
 
-# iwd
-alias wifi-scan="iwctl station wlan0 scan"
-alias wifi-connect="iwctl station wlan0 connect"
-alias wifi-disconnect="iwctl station wlan0 disconnect"
-
 # other
 alias Sleep="systemctl suspend && swaylock -e"
 alias Poweroff="rm $HOME/.bash_history && poweroff"
 alias Reboot="rm $HOME/.bash_history && reboot"
-alias sudo="doas"
 
 # Apt
 alias Upd="sudo apt update && apt list --upgradable"
@@ -66,7 +59,9 @@ alias Upg="sudo apt upgrade"
 alias Upp="Upd && Upg -y"
 alias Upf="Upd && Upg -y && Poweroff"
 
-# ez-* stuff
+## ez-* stuff
+alias ez-drop_caches="sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'"
+
 function ez-mv {
 	find . -maxdepth 1 -name "${1}*" | grep '~' &>/dev/null
 
