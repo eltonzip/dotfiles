@@ -113,7 +113,6 @@ default_border normal 4
 
 include /etc/sway/config.d/*
 include ./autostart.conf
-include ./launcher_mode.conf
 include ./classes.conf
 include ./input.conf
 include ./output.conf
