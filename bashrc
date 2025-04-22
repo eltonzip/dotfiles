@@ -48,16 +48,10 @@ alias devpy="source $HOME/.venv/bin/activate && cd $HOME/Programming/python"
 # Sway
 alias Sway="$HOME/Scripts/sway.sh"
 
-# other
-alias Sleep="systemctl suspend && swaylock -e"
-alias Poweroff="rm $HOME/.bash_history && poweroff"
-alias Reboot="rm $HOME/.bash_history && reboot"
-
 # Apt
 alias Upd="sudo apt update && apt list --upgradable"
 alias Upg="sudo apt upgrade"
 alias Upp="Upd && Upg -y"
-alias Upf="Upd && Upg -y && Poweroff"
 
 ## ez-* stuff
 alias ez-drop_caches="sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'"
