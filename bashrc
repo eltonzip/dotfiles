@@ -28,26 +28,6 @@ function cdto {
 	cd $(cat $HOME/.cdbuff)
 }
 
-function ez-mv {
-	find . -maxdepth 1 -name "${1}*" | grep '~' &>/dev/null
-
-	if [[ $? != 0 ]]; then
-		mv $1 "${1}~"
-	else
-		mv "${1}~" $(echo $1 | cut '-d~' -f1)
-	fi
-}
-
-function ez-cp {
-	find . -maxdepth 1 -name "${1}*" | grep '~' &>/dev/null
-
-	if [[ $? != 0 ]]; then
-		cp $1 "${1}~"
-	else
-		cp "${1}~" $(echo $1 | cut '-d~' -f1)
-	fi
-}
-
 # coreutils
 alias pgnu="ping gnu.org"
 alias free="free -h"
@@ -58,7 +38,6 @@ alias grep="grep --color=auto --exclude={tags,Makefile,build.sh,.gitignore} --ex
 alias zgrep="zgrep --color=auto"
 alias fgrep="fgrep --color=auto"
 alias egrep="egrep --color=auto"
-alias vi="vim"
 alias nvim="$HOME/Opt/nvim-linux-x86_64/bin/nvim"
 
 # dev
@@ -80,15 +59,36 @@ alias Poweroff="rm $HOME/.bash_history && poweroff"
 alias Reboot="rm $HOME/.bash_history && reboot"
 alias sudo="doas"
 
-function ez-tmux {
-	tmux new-session -s $(pwd | rev | cut '-d/' -f1 | rev)
-}
-
 # Apt
 alias Upd="sudo apt update && apt list --upgradable"
 alias Upg="sudo apt upgrade"
 alias Upp="Upd && Upg -y"
 alias Upf="Upd && Upg -y && Poweroff"
+
+# ez-* stuff
+function ez-mv {
+	find . -maxdepth 1 -name "${1}*" | grep '~' &>/dev/null
+
+	if [[ $? != 0 ]]; then
+		mv $1 "${1}~"
+	else
+		mv "${1}~" $(echo $1 | cut '-d~' -f1)
+	fi
+}
+
+function ez-cp {
+	find . -maxdepth 1 -name "${1}*" | grep '~' &>/dev/null
+
+	if [[ $? != 0 ]]; then
+		cp $1 "${1}~"
+	else
+		cp "${1}~" $(echo $1 | cut '-d~' -f1)
+	fi
+}
+
+function ez-tmux {
+	tmux new-session -s $(pwd | rev | cut '-d/' -f1 | rev)
+}
 
 ## Other stuff
 MAILCHECK=-1
