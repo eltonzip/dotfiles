@@ -100,4 +100,5 @@ tmux has-session -t='Main' &>/dev/null
 
 if [ $? != 0 ] && [[ $TERM_PROGRAM != 'tmux' ]]; then
 	tmux new-session -s 'Main'
+	tmux rename-window main
 fi

@@ -2,7 +2,6 @@
 set nocompatible
 set showcmd
 set wildmenu
-set background=dark
 
 set noswapfile
 set nobackup
@@ -30,6 +29,7 @@ if has('unnamedplus')
 endif
 
 " Colors
+set background=dark
 syntax on
 
 " Keymaps
@@ -57,15 +57,6 @@ nnoremap <silent> <leader>kr :set keymap=russian-jcukenwin<cr>
 " C/C++ stuff
 let c_syntax_for_h = 1
 
-function! EltonzipCAbbr()
-	iabbrev Cmain int main(int argc, char *argv[])<cr>{<cr>}<esc>k
-endfunction
-
-augroup ccpp
-	autocmd!
-	autocmd FileType c,cpp call EltonzipCAbbr()
-augroup END
-
 " Python stuff
 function! EltonzipPythonAbbr()
 	iabbrev Pmain if __name__ == "__main__":<esc>
@@ -74,17 +65,6 @@ endfunction
 augroup python
 	autocmd!
 	autocmd FileType python call EltonzipPythonAbbr()
-augroup END
-
-" Bash stuff
-function! EltonzipBashAbbr()
-	iabbrev Bif if [[  ]]; then<cr>fi<Esc><<k2f[l
-	iabbrev Belif elif [[  ]]; then<Esc>F]h
-endfunction
-
-augroup shell
-	autocmd!
-	autocmd FileType sh call EltonzipBashAbbr()
 augroup END
 
 " netrw
@@ -97,7 +77,7 @@ function! EltonzipGrep(num)
 	if !a:num
 		grep -rn <cword> --exclude={tags,Makefile,compile_commands.json,*.o}
 	elseif a:num == 1
-		grep -rn <cword> src --exclude={tags,Makefile,compile_commands.json,*.o}
+		grep -rn <cword> src/ --exclude={tags,Makefile,compile_commands.json,*.o}
 	else
 		grep <cword> %
 	endif
