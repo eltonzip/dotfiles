@@ -102,3 +102,13 @@ if [ $? != 0 ] && [[ $TERM_PROGRAM != 'tmux' ]]; then
 	tmux new-session -s 'Main'
 	tmux rename-window main
 fi
+
+function ez-export-to-tmux {
+	export SDL_VIDEODRIVER=wayland
+	export _JAVA_AWT_WM_NONREPARENTING=1
+	export QT_QPA_PLATFORM=wayland
+	export XDG_CURRENT_DESKTOP=sway
+	export XDG_SESSION_DESKTOP=sway
+	export MOZ_ENABLE_WAYLAND=1 # for Tor Browser to run natively in wayland
+	export WAYLAND_DISPLAY=wayland-1
+}
