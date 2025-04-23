@@ -22,7 +22,6 @@ cp -r Scripts $HOME/
 cp vimrc $HOME/.vimrc
 cp -r nvim $HOME/.config/
 cp gitconfig $HOME/.gitconfig
-cp -r tmux $HOME/.config/
 cp -r sway $HOME/.config/
 cp -r i3status $HOME/.config/
 cp -r alacritty $HOME/.config/
