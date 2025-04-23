@@ -94,3 +94,10 @@ function ez-tmux {
 
 ## Other stuff
 MAILCHECK=-1
+
+## tmux
+tmux has-session -t='Main' &>/dev/null
+
+if [[ $? != 0 ]]; then
+	tmux new-session -s 'Main'
+fi
