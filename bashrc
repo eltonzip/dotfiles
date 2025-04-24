@@ -31,7 +31,6 @@ function cdto {
 # coreutils
 alias pgnu="ping gnu.org"
 alias free="free -h"
-alias cal="ncal -Mb"
 alias ls="ls --color=auto"
 alias grep="grep --color=auto --exclude={tags,Makefile,build.sh,.gitignore} --exclude-dir={.cache,.git,.vscode}"
 alias zgrep="zgrep --color=auto"
@@ -45,25 +44,13 @@ alias ctags="ctags -R --kinds-C=+DLgpxzl --kinds-C++=+ADgLNUZpxzl --kinds-Python
 alias pvenv="source $HOME/.venv/bin/activate"
 alias devpy="source $HOME/.venv/bin/activate && cd $HOME/Programming/python"
 
-# Sway
-alias Sway="$HOME/Scripts/sway.sh"
-
-# iwd
-alias wifi-scan="iwctl station wlan0 scan"
-alias wifi-connect="iwctl station wlan0 connect"
-alias wifi-disconnect="iwctl station wlan0 disconnect"
-
 # other
-alias Sleep="systemctl suspend && swaylock -e"
-alias Poweroff="rm $HOME/.bash_history && poweroff"
-alias Reboot="rm $HOME/.bash_history && reboot"
 alias sudo="doas"
 
 # Apt
 alias Upd="sudo apt update && apt list --upgradable"
 alias Upg="sudo apt upgrade"
 alias Upp="Upd && Upg -y"
-alias Upf="Upp && Poweroff"
 
 ## ez-* stuff
 alias ez-drop_caches="sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'"
@@ -100,15 +87,4 @@ tmux has-session -t='Main' &>/dev/null
 
 if [ $? != 0 ] && [[ $TERM_PROGRAM != 'tmux' ]]; then
 	tmux new-session -s 'Main'
-	tmux rename-window main
 fi
-
-function ez-export-to-tmux {
-	export SDL_VIDEODRIVER=wayland
-	export _JAVA_AWT_WM_NONREPARENTING=1
-	export QT_QPA_PLATFORM=wayland
-	export XDG_CURRENT_DESKTOP=sway
-	export XDG_SESSION_DESKTOP=sway
-	export MOZ_ENABLE_WAYLAND=1 # for Tor Browser to run natively in wayland
-	export WAYLAND_DISPLAY=wayland-1
-}
