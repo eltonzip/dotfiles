@@ -20,8 +20,8 @@ set path+=**
 " Tabs
 set noexpandtab
 set smarttab
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=8
+set tabstop=8
 
 " Clipboard
 if has('unnamedplus')
