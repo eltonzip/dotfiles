@@ -23,11 +23,6 @@ set smarttab
 set shiftwidth=4
 set tabstop=4
 
-" Clipboard
-if has('unnamedplus')
-	set clipboard^=unnamedplus
-endif
-
 " Colors
 set background=dark
 syntax on
