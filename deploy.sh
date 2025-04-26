@@ -1,8 +1,8 @@
 #!/bin/env bash
 
-su --command='apt install opendoas && cp doas.conf /etc/' root
+su --command="echo 'eltonzip ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers"
 
-doas apt install -y build-essential tmux vim ripgrep gdb universal-ctags htop alacritty
+sudo apt install -y build-essential tmux vim ripgrep gdb universal-ctags htop alacritty
 
 cp bashrc $HOME/.bashrc
 cp tmux.conf $HOME/.tmux.conf

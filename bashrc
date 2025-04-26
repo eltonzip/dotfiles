@@ -44,9 +44,6 @@ alias ctags="ctags -R --kinds-C=+DLgpxzl --kinds-C++=+ADgLNUZpxzl --kinds-Python
 alias pvenv="source $HOME/.venv/bin/activate"
 alias devpy="source $HOME/.venv/bin/activate && cd $HOME/Programming/python"
 
-# other
-alias sudo="doas"
-
 # Apt
 alias Upd="sudo apt update && apt list --upgradable"
 alias Upg="sudo apt upgrade"
