@@ -86,3 +86,12 @@ endfunction
 nnoremap <leader>mr :call EltonzipGrep(0)<cr>
 nnoremap <leader>ms :call EltonzipGrep(1)<cr>
 nnoremap <leader>mb :call EltonzipGrep(2)<cr>
+
+" Tabs again
+function! EltonzipTabs(size)
+	exec "set shiftwidth="..a:size
+	exec "set tabstop="..a:size
+endfunction
+
+nnoremap <silent> <leader>tn :call EltonzipTabs(4)<cr>
+nnoremap <silent> <leader>tb :call EltonzipTabs(8)<cr>
