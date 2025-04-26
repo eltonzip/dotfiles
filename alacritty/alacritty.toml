@@ -1,0 +1,10 @@
+general.import = [
+	"theme.toml"
+]
+
+[font]
+size = 16
+
+[font.normal]
+family = "Liberation Mono"
+style = "Regular"
