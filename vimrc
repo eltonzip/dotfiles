@@ -2,6 +2,8 @@
 set nocompatible
 set showcmd
 set wildmenu
+set viminfofile="NONE"
+set scrolloff=0
 
 set noswapfile
 set nobackup

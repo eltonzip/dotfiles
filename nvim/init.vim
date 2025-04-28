@@ -33,9 +33,11 @@ Plug 'hrsh7th/nvim-cmp'
 
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
+
+Plug 'ellisonleao/gruvbox.nvim'
 call plug#end()
 
-colo evening
+colo gruvbox
 set makeprg=bear\ --\ make
 
 lua <<EOF

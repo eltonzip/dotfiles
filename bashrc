@@ -1,16 +1,3 @@
-case $- in
-    *i*) ;;
-      *) return;;
-esac
-
-if ! shopt -oq posix; then
-if [ -f /usr/share/bash-completion/bash_completion ]; then
-. /usr/share/bash-completion/bash_completion
-elif [ -f /etc/bash_completion ]; then
-. /etc/bash_completion
-fi
-fi
-
 ## Variables
 export EDITOR=vim
 
@@ -44,13 +31,9 @@ alias ctags="ctags -R --kinds-C=+DLgpxzl --kinds-C++=+ADgLNUZpxzl --kinds-Python
 alias pvenv="source $HOME/.venv/bin/activate"
 alias devpy="source $HOME/.venv/bin/activate && cd $HOME/Programming/python"
 
-# Apt
-alias Upd="sudo apt update && apt list --upgradable"
-alias Upg="sudo apt upgrade"
-alias Upp="Upd && Upg -y"
-
 ## ez-* stuff
 alias ez-drop_caches="sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'"
+alias ez-bashrc="vi $HOME/.bashrc.d/eltonzip"
 
 function ez-mv {
 	find . -maxdepth 1 -name "${1}*" | grep '~' &>/dev/null
