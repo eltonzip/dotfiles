@@ -40,6 +40,8 @@ nnoremap <leader>gg :grep
 
 nnoremap <silent> <C-j> :cnext<cr>
 nnoremap <silent> <C-k> :cprevious<cr>
+nnoremap <silent> <leader>co :copen<cr>
+nnoremap <silent> <leader>cc :cclose<cr>
 
 nnoremap <C-p> O<Esc>
 
@@ -67,20 +69,6 @@ let g:netrw_banner = 0
 
 " Grep
 set grepprg=grep\ -Hn\ --exclude={tags,Makefile,build.sh,.gitignore}\ --exclude-dir={.cache,.git,vscode}
-
-function! EltonzipGrep(num)
-	if !a:num
-		grep -rn <cword> --exclude={tags,Makefile,compile_commands.json,*.o}
-	elseif a:num == 1
-		grep -rn <cword> src/ --exclude={tags,Makefile,compile_commands.json,*.o}
-	else
-		grep <cword> %
-	endif
-endfunction
-
-nnoremap <leader>mr :call EltonzipGrep(0)<cr>
-nnoremap <leader>ms :call EltonzipGrep(1)<cr>
-nnoremap <leader>mb :call EltonzipGrep(2)<cr>
 
 " Tabs again
 function! EltonzipTabs(size)
