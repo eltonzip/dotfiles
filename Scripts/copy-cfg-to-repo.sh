@@ -1,6 +1,6 @@
 #!/bin/env bash
 
-cp $HOME/.bashrc.d/eltonzip $HOME/dotfiles/bashrc
+cp $HOME/.bash_ez $HOME/dotfiles/bash_ez
 cp $HOME/.vimrc $HOME/dotfiles/vimrc
 cp $HOME/.gitconfig $HOME/dotfiles/gitconfig
 cp $HOME/.tmux.conf $HOME/dotfiles/tmux.conf

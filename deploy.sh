@@ -1,9 +1,8 @@
 #!/bin/env bash
 
-sudo dnf install tmux vim ripgrep gdb htop alacritty
+sudo apt install -y build-essential tmux vim ripgrep gdb htop alacritty
 
-mkdir $HOME/.bashrc.d
-cp bashrc $HOME/.bashrc.d/eltonzip
+cp bash_ez $HOME/.bash_ez
 cp tmux.conf $HOME/.tmux.conf
 cp -r Scripts $HOME/
 cp vimrc $HOME/.vimrc
