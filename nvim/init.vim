@@ -9,9 +9,7 @@ vim.diagnostic.config {
 
 vim.keymap.set('n', '<leader>lr', vim.lsp.buf.references)
 vim.keymap.set('n', '<leader>lc', vim.lsp.buf.rename)
-vim.keymap.set('n', '<leader>lc', vim.lsp.buf.rename)
-vim.keymap.set('n', '<leader>ls', vim.lsp.buf.document_symbol)
-
+vim.keymap.set('n', '<leader>ll', vim.lsp.buf.document_symbol)
 
 vim.lsp.config['clangd'] = {
 	cmd = {'clangd', '--background-index', '--clang-tidy', '--log=verbose'},
