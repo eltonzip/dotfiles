@@ -17,7 +17,6 @@ function cdto {
 
 # coreutils
 alias pgnu="ping gnu.org"
-alias free="free -h"
 alias ls="ls --color=auto"
 alias grep="grep --color=auto --exclude={tags,Makefile,build.sh,.gitignore} --exclude-dir={.cache,.git,.vscode}"
 alias zgrep="zgrep --color=auto"
@@ -30,6 +29,12 @@ alias nvim="$HOME/Opt/nvim-linux-x86_64/bin/nvim"
 alias ctags="ctags -R --kinds-C=+DLgpxzl --kinds-C++=+ADgLNUZpxzl --kinds-Python=+lz --fields=+iaS --extras=+q"
 alias pvenv="source $HOME/.venv/bin/activate"
 alias devpy="source $HOME/.venv/bin/activate && cd $HOME/Programming/python"
+
+# apt
+alias Upd="sudo apt update && apt list --upgradable"
+alias Upg="sudo apt upgrade"
+alias Upp="Upd && Upg"
+alias Upf="Upd && Upg && poweroff"
 
 ## ez-* stuff
 alias ez-drop_caches="sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'"
