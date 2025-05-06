@@ -1,6 +1,6 @@
 #!/bin/env bash
 
-sudo apt install -y build-essential tmux vim universal-ctags ripgrep gdb htop alacritty clang clangd curl
+sudo pacman -S --noconfirm tmux ctags htop alacritty
 
 cp bash_ez $HOME/.bash_ez
 cp tmux.conf $HOME/.tmux.conf

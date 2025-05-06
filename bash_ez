@@ -1,5 +1,6 @@
 ## Variables
 export EDITOR=vim
+export MOZ_ENABLE_WAYLAND=1
 
 ## Prompt
 PS1='$ '

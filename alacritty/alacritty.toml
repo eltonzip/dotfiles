@@ -3,7 +3,7 @@ general.import = [
 ]
 
 [font]
-size = 14
+size = 13
 
 [font.normal]
 family = "Liberation Mono"
