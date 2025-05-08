@@ -23,7 +23,6 @@ alias grep="grep --color=auto --exclude={tags,Makefile,build.sh,.gitignore} --ex
 alias zgrep="zgrep --color=auto"
 alias fgrep="fgrep --color=auto"
 alias egrep="egrep --color=auto"
-alias vi="vim"
 
 # dev
 alias ctags="ctags -R --kinds-C=+DLgpxzl --kinds-C++=+ADgLNUZpxzl --kinds-Python=+lz --fields=+iaS --extras=+q"
