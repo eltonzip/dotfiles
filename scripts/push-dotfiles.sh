@@ -1,7 +1,6 @@
 #!/bin/env bash
 
-. $HOME/Scripts/copy-cfg-to-repo.sh
+. $HOME/scripts/copy-cfg-to-repo.sh
 cd $HOME/dotfiles
-git add .
-git commit
+git commit -a
 git push

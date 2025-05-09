@@ -57,6 +57,16 @@ function ez-tmux {
 	tmux new-session -s $(pwd | rev | cut '-d/' -f1 | rev)
 }
 
+function ez-fzf-tmux {
+	if [[ $(command -v fzf) == '' ]]; then
+		echo 'fzf is not installed'
+		return 1
+	fi
+
+	cd $(fzf --walker=dir)
+	ez-tmux
+}
+
 ## Other stuff
 MAILCHECK=-1
 
