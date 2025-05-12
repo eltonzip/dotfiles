@@ -45,7 +45,7 @@ nnoremap <silent> <C-k> :cprevious<cr>
 nnoremap <silent> <leader>co :copen<cr>
 nnoremap <silent> <leader>cc :cclose<cr>
 
-nnoremap <C-p> O<Esc>
+nnoremap <silent> <C-p> O<Esc>
 
 nnoremap <leader>mp :set makeprg=
 nnoremap <leader>mm :make<cr>
@@ -74,12 +74,3 @@ set grepprg=grep\ -Hn\ --exclude={tags,Makefile,build.sh,.gitignore}\ --exclude-
 
 nnoremap <leader>ga :set grepprg=grep\ -Hn\ --exclude={tags,Makefile,build.sh,.gitignore}\ --exclude-dir={.cache,.git,vscode}<cr>
 nnoremap <leader>gr :set grepprg=git\ grep\ -Hn<cr>
-
-" Tabs again
-function! EltonzipTabs(size)
-	exec "set shiftwidth="..a:size
-	exec "set tabstop="..a:size
-endfunction
-
-nnoremap <silent> <leader>tn :call EltonzipTabs(4)<cr>
-nnoremap <silent> <leader>tb :call EltonzipTabs(8)<cr>
