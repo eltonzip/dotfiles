@@ -72,6 +72,9 @@ let g:netrw_banner = 0
 " Grep
 set grepprg=grep\ -Hn\ --exclude={tags,Makefile,build.sh,.gitignore}\ --exclude-dir={.cache,.git,vscode}
 
+nnoremap <leader>ga :set grepprg=grep\ -Hn\ --exclude={tags,Makefile,build.sh,.gitignore}\ --exclude-dir={.cache,.git,vscode}<cr>
+nnoremap <leader>gr :set grepprg=git\ grep\ -Hn<cr>
+
 " Tabs again
 function! EltonzipTabs(size)
 	exec "set shiftwidth="..a:size
