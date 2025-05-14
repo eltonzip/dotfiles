@@ -27,3 +27,4 @@ hi PreProc ctermfg=LightBlue
 "hi Structure ctermfg=Yellow
 hi Typedef ctermfg=Yellow
 hi cConstant ctermfg=Magenta
+hi shShellVariables ctermfg=White
