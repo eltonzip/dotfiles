@@ -26,7 +26,8 @@ set shiftwidth=4
 set tabstop=4
 
 " Colors
-set background=dark
+set background=light
+colo eltonzip
 syntax on
 
 " Keymaps
