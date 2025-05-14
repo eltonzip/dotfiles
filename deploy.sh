@@ -2,6 +2,7 @@
 
 sudo pacman -S --noconfirm tmux ctags htop alacritty gdb
 
+mkdir -p $HOME/.vim/colors
 cp bash_ez $HOME/.bash_ez
 cp tmux.conf $HOME/.tmux.conf
 cp -r Scripts $HOME/

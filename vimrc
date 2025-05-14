@@ -26,7 +26,6 @@ set shiftwidth=4
 set tabstop=4
 
 " Colors
-set background=light
 colo eltonzip
 syntax on
 
