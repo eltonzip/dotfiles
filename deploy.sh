@@ -1,15 +1,14 @@
 #!/bin/env bash
 
-sudo pacman -S --noconfirm tmux ctags gdb terminus-font
+sudo pacman -S --noconfirm --needed tmux ctags gdb terminus-font
 
 mkdir -p $HOME/.vim/colors
-cp bash_ez $HOME/.bash_ez
-cp tmux.conf $HOME/.tmux.conf
-cp -r Scripts $HOME/
-cp vimrc $HOME/.vimrc
-cp eltonzip.vim $HOME/.vim/colors/
-cp gitconfig $HOME/.gitconfig
-cp gdbinit $HOME/.gdbinit
+ln -s $(pwd)/bash_ez $HOME/.bash_ez
+ln -s $(pwd)/eltonzip.vim $HOME/.vim/colors/eltonzip.vim
+ln -s $(pwd)/gdbinit $HOME/.gdbinit
+ln -s $(pwd)/gitconfig $HOME/.gitconfig
+ln -s $(pwd)/tmux.conf $HOME/.tmux.conf
+ln -s $(pwd)/vimrc $HOME/.vimrc
 
 sed -i '$a\
 \
