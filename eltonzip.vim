@@ -8,19 +8,19 @@ set background=dark
 hi clear
 let g:colors_name = "eltonzip"
 
-hi! Comment ctermfg=LightYellow
-hi! Constant ctermfg=LightYellow
-hi! Identifier ctermfg=LightYellow
-hi! Statement ctermfg=LightYellow
-hi! PreProc ctermfg=LightYellow
-hi! Type ctermfg=LightYellow
-hi! Special ctermfg=LightYellow
+hi! Comment ctermfg=White
+hi! Constant ctermfg=White
+hi! Identifier ctermfg=White
+hi! Statement ctermfg=White
+hi! PreProc ctermfg=White
+hi! Type ctermfg=White
+hi! Special ctermfg=White
 
 hi String ctermfg=Green
 hi Number ctermfg=White
 hi Character ctermfg=Green
 hi SpecialChar ctermfg=LightRed
-hi Boolean ctermfg=Magenta
+hi Boolean ctermfg=White
 hi Type ctermfg=White
 hi Comment ctermfg=DarkCyan
 hi PreProc ctermfg=LightBlue
