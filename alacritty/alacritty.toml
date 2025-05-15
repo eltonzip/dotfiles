@@ -6,5 +6,5 @@ general.import = [
 size = 13
 
 [font.normal]
-family = "Liberation Mono"
+family = "Terminus"
 style = "Regular"
