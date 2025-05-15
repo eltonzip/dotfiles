@@ -1,6 +1,6 @@
 #!/bin/env bash
 
-sudo pacman -S --noconfirm tmux ctags htop alacritty gdb terminus-font
+sudo pacman -S --noconfirm tmux ctags gdb terminus-font
 
 mkdir -p $HOME/.vim/colors
 cp bash_ez $HOME/.bash_ez
@@ -10,7 +10,6 @@ cp vimrc $HOME/.vimrc
 cp eltonzip.vim $HOME/.vim/colors/
 cp gitconfig $HOME/.gitconfig
 cp gdbinit $HOME/.gdbinit
-cp -r alacritty $HOME/.config/
 
 sed -i '$a\
 \
