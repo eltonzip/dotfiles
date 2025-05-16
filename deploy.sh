@@ -21,7 +21,7 @@ grep 'bash_ez' $HOME/.bashrc &>/dev/null
 if [[ $? != 0 ]]; then
 	sed -i '$a\
 \
-if [ -f $HOME/.bash_ez ]; then\
+if [ -e $HOME/.bash_ez ]; then\
 	. $HOME/.bash_ez\
 fi' $HOME/.bashrc
 fi
