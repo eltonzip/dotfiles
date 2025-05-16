@@ -1,7 +1,6 @@
 #!/bin/env bash
 
 distro=$(grep -o 'Debian\|Arch' /etc/os-release | uniq)
-
 if [[ $distro == 'Arch' ]]; then
 	sudo pacman -S --noconfirm --needed tmux ctags gdb
 elif [[ $distro == 'Debian' ]]; then
@@ -19,7 +18,6 @@ ln -s $(pwd)/tmux.conf $HOME/.tmux.conf
 ln -s $(pwd)/vimrc $HOME/.vimrc
 
 grep 'bash_ez' $HOME/.bashrc &>/dev/null
-
 if [[ $? != 0 ]]; then
 	sed -i '$a\
 \
