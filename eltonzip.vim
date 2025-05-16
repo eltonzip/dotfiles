@@ -15,6 +15,7 @@ hi! Statement ctermfg=White
 hi! PreProc ctermfg=White
 hi! Type ctermfg=White
 hi! Special ctermfg=White
+hi! Normal ctermfg=White
 
 hi String ctermfg=Green
 hi Number ctermfg=White
