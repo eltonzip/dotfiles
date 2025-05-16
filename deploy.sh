@@ -1,6 +1,6 @@
 #!/bin/env bash
 
-sudo pacman -S --noconfirm --needed tmux ctags gdb terminus-font
+sudo pacman -S --noconfirm --needed tmux ctags gdb
 
 mkdir -p $HOME/.vim/colors
 ln -s $(pwd)/bash_ez $HOME/.bash_ez
