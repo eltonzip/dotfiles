@@ -33,6 +33,15 @@ alias devpy="source $HOME/.venv/bin/activate && cd $HOME/Programming/python"
 alias ez-drop_caches="sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'"
 alias ez-git="git add . && git commit && git push"
 
+function ez-vim {
+	if [[ $(command -v fzf) == '' ]]; then
+		echo 'fzf is not installed'
+		return 1
+	fi
+
+	vim $(fzf --walker=file,hidden)
+}
+
 function ez-mv {
 	find . -maxdepth 1 -name "${1}*" | grep '~' &>/dev/null
 
