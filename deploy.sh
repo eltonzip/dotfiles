@@ -1,6 +1,14 @@
 #!/bin/env bash
 
-sudo pacman -S --noconfirm --needed tmux ctags gdb
+distro=$(grep -o 'Debian\|Arch' /etc/os-release | uniq)
+
+if [[ $distro == 'Arch' ]]; then
+	sudo pacman -S --noconfirm --needed tmux ctags gdb
+elif [[ $distro == 'Debian' ]]; then
+	sudo apt install tmux universal-ctags gdb vim
+else
+	echo 'this script is not suitable for your distro'
+fi
 
 mkdir -p $HOME/.vim/colors
 ln -s $(pwd)/bash_ez $HOME/.bash_ez
@@ -10,8 +18,12 @@ ln -s $(pwd)/gitconfig $HOME/.gitconfig
 ln -s $(pwd)/tmux.conf $HOME/.tmux.conf
 ln -s $(pwd)/vimrc $HOME/.vimrc
 
-sed -i '$a\
+grep 'bash_ez' $HOME/.bashrc &>/dev/null
+
+if [[ $? != 0 ]]; then
+	sed -i '$a\
 \
 if [ -f $HOME/.bash_ez ]; then\
 	. $HOME/.bash_ez\
 fi' $HOME/.bashrc
+fi
