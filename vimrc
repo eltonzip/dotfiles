@@ -26,8 +26,7 @@ set shiftwidth=4
 set tabstop=4
 
 " Colors
-syntax on
-set background=dark
+syntax off
 
 " Keymaps
 let mapleader = " "
