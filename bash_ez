@@ -1,0 +1,62 @@
+## Variables
+export EDITOR=vim
+
+## Prompt
+PS1='$ '
+
+## Aliases
+alias reload="source ~/.bashrc"
+
+alias ..="cd .."
+alias ...="cd ../.."
+
+alias cdin="pwd > ~/.cdbuff"
+function cdto {
+	cd $(cat $HOME/.cdbuff)
+}
+
+# coreutils
+alias pgnu="ping gnu.org"
+alias grep="grep --color=never --exclude={tags,Makefile,build.sh,.gitignore} --exclude-dir={.cache,.git,.vscode}"
+alias ls="ls --color=never"
+alias less="less --mouse --wheel-lines=3"
+
+# dev
+alias ctags="ctags -R --kinds-C=+DLgpxzl --kinds-C++=+ADgLNUZpxzl --kinds-Python=+lz --fields=+iaS --extras=+q"
+
+## ez-* stuff
+alias ez-drop_caches="sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'"
+alias ez-git="git add . && git commit && git push"
+
+function ez-vim {
+	if [[ $(command -v fzf) == '' ]]; then
+		echo 'fzf is not installed'
+		return 1
+	fi
+
+	vim $(fzf --walker=file,hidden)
+}
+
+function ez-tmux {
+	tmux new-session -s $(pwd | rev | cut '-d/' -f1 | rev)
+}
+
+function ez-fzf-tmux {
+	if [[ $(command -v fzf) == '' ]]; then
+		echo 'fzf is not installed'
+		return 1
+	fi
+
+	cd $(fzf --walker=dir)
+	ez-tmux
+}
+
+## Other stuff
+MAILCHECK=-1
+
+## tmux
+tmux has-session -t='Main' &>/dev/null
+
+if [ $? != 0 ] && [[ $TERM_PROGRAM != 'tmux' ]]; then
+       tmux new-session -s 'Main'
+fi
