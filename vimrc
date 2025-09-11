@@ -26,7 +26,8 @@ set shiftwidth=4
 set tabstop=4
 
 " Colors
-syntax off
+syntax on
+set background=dark
 
 " Gvim
 if has('gui_running')
@@ -42,6 +43,9 @@ nnoremap - :Explore<cr>
 nnoremap viq vi"
 vnoremap iq i"
 nnoremap ciq ci"
+nnoremap viq vi'
+vnoremap iq i'
+nnoremap ciq ci'
 
 nnoremap <silent> <C-l> :noh<cr><C-l>
 
@@ -69,11 +73,17 @@ function! EltonzipCCPPFindMacro()
 	execute "grep -rI 'define '" . l:macro_name
 endfunction
 
-nnoremap <leader>cf :call EltonzipCCPPFindFunction()<cr>
-nnoremap <leader>cm :call EltonzipCCPPFindMacro()<cr>
+augroup EZ_CCPP
+	autocmd!
+	autocmd FileType c,cpp nnoremap <leader>cf :call EltonzipCCPPFindFunction()<cr>
+	autocmd FileType c,cpp nnoremap <leader>cm :call EltonzipCCPPFindMacro()<cr>
+augroup END
 
 " Python stuff
-iabbrev Pmain if __name__ == "__main__":<esc>
+augroup EZ_PYTHON
+	autocmd!
+	autocmd FileType python iabbrev Pmain if __name__ == "__main__":<esc>
+augroup END
 
 " netrw
 let g:netrw_banner = 0
