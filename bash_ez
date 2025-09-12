@@ -56,6 +56,6 @@ MAILCHECK=-1
 ## tmux
 tmux has-session -t='Main' &>/dev/null
 
-if [ $? != 0 ] && [[ $TERM_PROGRAM != 'tmux' ]]; then
+if [[ $? != 0 ]]; then
        tmux new-session -d -s 'Main'
 fi
