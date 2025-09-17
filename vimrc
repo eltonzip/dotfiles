@@ -57,6 +57,7 @@ nnoremap <silent> <C-k> :cprevious<cr>
 nnoremap <silent> <C-p> O<Esc>
 
 nnoremap <leader>mp :set makeprg=
+nnoremap <leader>mm :make<cr>
 
 nnoremap <silent> <leader>ke :set keymap=""<cr>
 nnoremap <silent> <leader>kr :set keymap=russian-jcukenwin<cr>
