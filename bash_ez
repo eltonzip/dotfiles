@@ -20,6 +20,9 @@ alias pgnu="ping gnu.org"
 alias grep="grep --exclude={tags,Makefile,build.sh,.gitignore} --exclude-dir={.cache,.git,.vscode}"
 alias less="less --mouse --wheel-lines=3"
 
+#other default utils
+alias cal="cal -3m"
+
 # dev
 alias ctags="ctags -R --kinds-C=+DLgpxzl --kinds-C++=+ADgLNUZpxzl --kinds-Python=+lz --fields=+iaS --extras=+q"
 

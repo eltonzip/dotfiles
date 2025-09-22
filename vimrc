@@ -32,6 +32,7 @@ set background=dark
 " Gvim
 if has('gui_running')
 	set guioptions-=T "toolbar
+	set background=light
 endif
 
 " Keymaps
