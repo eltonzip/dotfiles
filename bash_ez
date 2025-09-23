@@ -18,7 +18,7 @@ function cdto {
 # coreutils
 alias pgnu="ping gnu.org"
 alias grep="grep --color=auto --exclude={tags,Makefile,build.sh,.gitignore} --exclude-dir={.cache,.git,.vscode}"
-alias zgrep="zgrep --color=auto --exclude={tags,Makefile,build.sh,.gitignore} --exclude-dir={.cache,.git,.vscode}"
+alias zgrep="zgrep --color=auto"
 alias less="less --mouse --wheel-lines=3"
 
 #other default utils
