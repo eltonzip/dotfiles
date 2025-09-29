@@ -79,6 +79,8 @@ augroup EZ_CCPP
 	autocmd!
 	autocmd FileType c,cpp nnoremap <leader>cf :call EltonzipCCPPFindFunction()<cr>
 	autocmd FileType c,cpp nnoremap <leader>cm :call EltonzipCCPPFindMacro()<cr>
+	autocmd FileType c,cpp iabbrev  Cm /*  */<esc>hhh
+	autocmd FileType c,cpp iabbrev  Clm /*<cr>*/<esc>O**
 augroup END
 
 " Python stuff
