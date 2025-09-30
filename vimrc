@@ -52,6 +52,8 @@ nnoremap <silent> <C-l> :noh<cr><C-l>
 
 nnoremap <leader>ls :ls<cr>:b 
 
+nnoremap <silent> <leader>co :copen<cr>
+nnoremap <silent> <leader>cc :cclose<cr>
 nnoremap <silent> <C-j> :cnext<cr>
 nnoremap <silent> <C-k> :cprevious<cr>
 
