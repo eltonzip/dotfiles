@@ -4,7 +4,7 @@ distro=$(grep -o 'Debian\|Arch' /etc/os-release | uniq)
 if [[ $distro == 'Arch' ]]; then
 	sudo pacman -S --noconfirm --needed tmux ctags gdb
 elif [[ $distro == 'Debian' ]]; then
-	sudo apt install tmux universal-ctags gdb vim
+	sudo apt install -y tmux universal-ctags gdb vim
 else
 	echo 'this script is not suitable for your distro'
 fi
