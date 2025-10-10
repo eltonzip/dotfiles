@@ -16,6 +16,7 @@ function cdto {
 }
 
 # coreutils
+alias vi="vim"
 alias pgnu="ping gnu.org"
 alias grep="grep --color=auto --exclude={tags,Makefile,build.sh,.gitignore} --exclude-dir={.cache,.git,.vscode}"
 alias zgrep="zgrep --color=auto"
