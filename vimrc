@@ -51,6 +51,8 @@ nnoremap ciq ci'
 nnoremap <silent> <C-l> :noh<cr><C-l>
 
 nnoremap <leader>ls :ls<cr>:b 
+nnoremap <leader>gg :grep -r 
+nnoremap <leader>ff :find 
 
 nnoremap <silent> <leader>co :copen<cr>
 nnoremap <silent> <leader>cc :cclose<cr>
@@ -83,7 +85,7 @@ augroup EZ_CCPP
 	autocmd FileType c,cpp nnoremap <leader>cm :call EltonzipCCPPFindMacro()<cr>
 	autocmd FileType c,cpp iabbrev  Cm /*  */<esc>hhh
 	autocmd FileType c,cpp iabbrev  Clm /*<cr>*/<esc>O**
-	autocmd FileType c,cpp iabbrev  Cmain int main(int argc, char *argv[])<cr>{<cr>}<esc>O
+	autocmd FileType c,cpp iabbrev  Cmain int main(int argc, char *argv[])<cr>{<cr>return 0;<cr>}<esc>kO<esc>kk
 augroup END
 
 " Python stuff
