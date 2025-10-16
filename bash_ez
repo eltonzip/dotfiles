@@ -2,7 +2,7 @@
 export EDITOR=vim
 
 ## Prompt
-PS1='$ '
+PS1="\[\033[1;34m\]\W\[\033[0;37m\] \$ "
 
 ## Aliases
 alias reload="source ~/.bashrc"
@@ -56,8 +56,8 @@ function ez-fzf-tmux {
 MAILCHECK=-1
 
 ## tmux
-tmux has-session -t='Main' &>/dev/null
+tmux has-session -t='Main' 2>/dev/null
 
-if [[ $? != 0 ]]; then
-       tmux new-session -d -s 'Main'
+if [[ $? != 0  && $TMUX != '' ]]; then
+       tmux rename-session Main
 fi
