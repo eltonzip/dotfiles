@@ -57,7 +57,6 @@ MAILCHECK=-1
 
 ## tmux
 tmux has-session -t='Main' 2>/dev/null
-
-if [[ $? != 0  && $TMUX != '' ]]; then
+if [[ $? != 0 && $TMUX != '' ]]; then
        tmux rename-session Main
 fi
