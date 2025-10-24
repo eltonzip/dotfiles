@@ -69,20 +69,9 @@ nnoremap <silent> <leader>kr :set keymap=russian-jcukenwin<cr>
 
 " C/C++ stuff
 let c_syntax_for_h = 1
-function! EltonzipCCPPFindFunction()
-	let l:fun_name = input("Function's name: ")
-	execute "grep -rI '^'" . l:fun_name
-endfunction
-
-function! EltonzipCCPPFindMacro()
-	let l:macro_name = input("Macro's name: ")
-	execute "grep -rI 'define '" . l:macro_name
-endfunction
 
 augroup EZ_CCPP
 	autocmd!
-	autocmd FileType c,cpp nnoremap <leader>cf :call EltonzipCCPPFindFunction()<cr>
-	autocmd FileType c,cpp nnoremap <leader>cm :call EltonzipCCPPFindMacro()<cr>
 	autocmd FileType c,cpp iabbrev  Cm /*  */<esc>hhh
 	autocmd FileType c,cpp iabbrev  Clm /*<cr>*/<esc>O**
 	autocmd FileType c,cpp iabbrev  Cmain int main(int argc, char *argv[])<cr>{<cr>return 0;<cr>}<esc>kO<esc>kk
