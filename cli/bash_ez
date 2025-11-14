@@ -49,11 +49,11 @@ alias ctags="ctags -R --kinds-C=+DLgpxzl --kinds-C++=+ADgLNUZpxzl --kinds-Python
 alias ez-drop_caches="sudo sh -c 'echo 3 >/proc/sys/vm/drop_caches'"
 alias ez-git="git add . && git commit && git push"
 
-function tmuxn {
+function tmuxd {
 	tmux new-session -s $(pwd | rev | cut -d/ -f1 | rev)
 }
 
-function tmuxd {
+function tmuxr {
 	ranger --choosedir=$HOME/.rangerdir
 	dir=$(cat $HOME/.rangerdir | rev | cut -d/ -f1 | rev)
 	tmux new-session -c $(cat $HOME/.rangerdir) -s $dir
