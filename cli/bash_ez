@@ -1,0 +1,70 @@
+## Variables
+unset HISTFILE
+export EDITOR=vim
+
+## Prompt
+PS1="\[\033[1;34m\]\W\[\033[0;37m\] \$ "
+
+## Aliases
+alias reload="source ~/.bashrc"
+
+alias ..="cd .."
+alias ...="cd ../.."
+
+alias cdin="pwd >~/.cdbuff"
+function cdto {
+	cd $(cat $HOME/.cdbuff)
+}
+
+# core stuff
+alias vi="vim"
+alias pgnu="ping gnu.org"
+alias grep="grep --color=auto --exclude={tags,Makefile,build.sh,.gitignore} --exclude-dir={.cache,.git,.vscode}"
+alias zgrep="zgrep --color=auto"
+alias less="less --mouse --wheel-lines=3"
+alias date="date '+%H:%M:%S %A %B %d.%m.%Y'"
+alias cal="cal -3m"
+
+# dev
+alias ctags="ctags -R --kinds-C=+DLgpxzl --kinds-C++=+ADgLNUZpxzl --kinds-Python=+lz --fields=+iaS --extras=+q"
+
+## ez-* stuff
+# not called 'ez', but it is my thing
+function cdf {
+	cd $(fzf --walker=dir,hidden)
+}
+
+alias ez-drop_caches="sudo sh -c 'echo 3 >/proc/sys/vm/drop_caches'"
+alias ez-git="git add . && git commit && git push"
+
+function vif {
+	if [[ $(command -v fzf) == '' ]]; then
+		echo 'fzf is not installed'
+		return 1
+	fi
+
+	vim $(fzf --walker=file,hidden)
+}
+
+function tmuxd {
+	tmux new-session -s $(pwd | rev | cut -d/ -f1 | rev)
+}
+
+function tmuxf {
+	if [[ $(command -v fzf) == '' ]]; then
+		echo 'fzf is not installed'
+		return 1
+	fi
+
+	cdf
+	tmuxd
+}
+
+## Other stuff
+MAILCHECK=-1
+
+## tmux
+tmux has-session -t='Main' 2>/dev/null
+if [[ $? != 0 && $TMUX != '' ]]; then
+       tmux rename-session Main
+fi
