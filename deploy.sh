@@ -18,11 +18,11 @@ if [[ -n $(command -v pacman) ]]; then
 	ln -s $(pwd)/cli/tmux.conf  $HOME/.tmux.conf
 	ln -s $(pwd)/cli/gitconfig  $HOME/.gitconfig
 	ln -s $(pwd)/cli/gdbinit    $HOME/.gdbinit
+	ln -s $(pwd)/cli/ranger     $HOME/.config/ranger
 
 	ln -s $(pwd)/gui/sway       $HOME/.config/sway
 	ln -s $(pwd)/gui/foot       $HOME/.config/foot
 	ln -s $(pwd)/gui/flameshot  $HOME/.config/flameshot
-	ln -s $(pwd)/gui/ranger     $HOME/.config/ranger
 	ln -s $(pwd)/gui/zathura    $HOME/.config/zathura
 	ln -s $(pwd)/gui/mako       $HOME/.config/mako
 
