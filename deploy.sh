@@ -24,6 +24,7 @@ if [[ -n $(command -v pacman) ]]; then
 	ln -s $(pwd)/gui/foot       $HOME/.config/foot
 	ln -s $(pwd)/gui/flameshot  $HOME/.config/flameshot
 	ln -s $(pwd)/gui/zathura    $HOME/.config/zathura
+	ln -s $(pwd)/gui/mpv        $HOME/.config/mpv
 	ln -s $(pwd)/gui/mako       $HOME/.config/mako
 
 	sed -i '$a\
