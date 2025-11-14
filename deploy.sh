@@ -1,8 +1,7 @@
 #!/bin/env bash
 
-command -v pacman
-if [ $? == 0 ]; then
-	sudo pacman -S --needed tmux gdb ctags                               \
+if [[ -n $(command -v pacman) ]]; then
+	sudo pacman -S --needed tmux gdb ctags                           \
 		sway pipewire-pulse foot mako polkit mpv bluez blueman       \
 		swaylock wmenu otf-font-awesome wl-clipboard                 \
 		xdg-desktop-portal-gtk xdg-desktop-portal-wlr xorg-xwayland  \
@@ -30,19 +29,7 @@ if [ $? == 0 ]; then
 	sed -i '$a\
 \
 #eltonzip:\
-if [[ $XDG_SESSION_TYPE == "wayland" ]]; then\
-	export MOZ_ENABLE_WAYLAND=1\
-fi\
-\
-alias Up="sudo pacman -Syu --noconfirm"\
-alias Up-r="sudo pacman -Syu --noconfirm; reboot"\
-alias Up-p="sudo pacman -Syu --noconfirm; poweroff"\
-alias fm="ranger"\
-alias Sway="dbus-run-session sway"\
-\
-if [ -e $HOME/.bash_ez ]; then\
-	. $HOME/.bash_ez\
-fi' $HOME/.bashrc
+[[ -L $HOME/.bash_ez ]] && . $HOME/.bash_ez' $HOME/.bashrc
 else
 	echo 'No pacman on this machine'
 	exit 1

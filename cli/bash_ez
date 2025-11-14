@@ -2,6 +2,10 @@
 unset HISTFILE
 export EDITOR=vim
 
+if [[ $XDG_SESSION_TYPE == "wayland" ]]; then
+	export MOZ_ENABLE_WAYLAND=1
+fi
+
 ## Prompt
 PS1="\[\033[1;34m\]\W\[\033[0;37m\] \$ "
 
@@ -15,6 +19,12 @@ alias cdin="pwd >~/.cdbuff"
 function cdto {
 	cd $(cat $HOME/.cdbuff)
 }
+
+alias Up="sudo pacman -Syu --noconfirm"
+alias Up-r="sudo pacman -Syu --noconfirm; reboot"
+alias Up-p="sudo pacman -Syu --noconfirm; poweroff"
+alias fm="ranger"
+alias Sway="dbus-run-session sway"
 
 # core stuff
 alias vi="vim"
