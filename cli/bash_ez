@@ -25,7 +25,7 @@ alias Up="sudo pacman -Syu --noconfirm"
 alias Up-r="sudo pacman -Syu --noconfirm; reboot"
 alias Up-p="sudo pacman -Syu --noconfirm; poweroff"
 alias fm="ranger"
-function fmr {
+function fmd {
 	ranger --choosedir=$HOME/.rangerdir
 	cd $(cat $HOME/.rangerdir)
 }
@@ -53,9 +53,11 @@ function tmuxn {
 	tmux new-session -s $(pwd | rev | cut -d/ -f1 | rev)
 }
 
-function tmuxr {
-	fmr
-	tmuxn
+function tmuxd {
+	ranger --choosedir=$HOME/.rangerdir
+	dir=$(cat $HOME/.rangerdir | rev | cut -d/ -f1 | rev)
+	tmux new-session -c $(cat $HOME/.rangerdir) -s $dir
+	unset dir
 }
 
 ## Other stuff
