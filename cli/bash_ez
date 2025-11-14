@@ -24,6 +24,10 @@ alias Up="sudo pacman -Syu --noconfirm"
 alias Up-r="sudo pacman -Syu --noconfirm; reboot"
 alias Up-p="sudo pacman -Syu --noconfirm; poweroff"
 alias fm="ranger"
+function fmd {
+	ranger --choosedir=$HOME/.rangerdir
+	cd $(cat $HOME/.rangerdir)
+}
 alias Sway="dbus-run-session sway"
 
 # core stuff
