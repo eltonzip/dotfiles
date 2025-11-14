@@ -14,6 +14,7 @@ alias reload="source ~/.bashrc"
 
 alias ..="cd .."
 alias ...="cd ../.."
+alias -- -="cd -"
 
 alias cdin="pwd >~/.cdbuff"
 function cdto {
@@ -24,7 +25,7 @@ alias Up="sudo pacman -Syu --noconfirm"
 alias Up-r="sudo pacman -Syu --noconfirm; reboot"
 alias Up-p="sudo pacman -Syu --noconfirm; poweroff"
 alias fm="ranger"
-function fmd {
+function fmr {
 	ranger --choosedir=$HOME/.rangerdir
 	cd $(cat $HOME/.rangerdir)
 }
@@ -44,34 +45,17 @@ alias ctags="ctags -R --kinds-C=+DLgpxzl --kinds-C++=+ADgLNUZpxzl --kinds-Python
 
 ## ez-* stuff
 # not called 'ez', but it is my thing
-function cdf {
-	cd $(fzf --walker=dir,hidden)
-}
 
 alias ez-drop_caches="sudo sh -c 'echo 3 >/proc/sys/vm/drop_caches'"
 alias ez-git="git add . && git commit && git push"
 
-function vif {
-	if [[ $(command -v fzf) == '' ]]; then
-		echo 'fzf is not installed'
-		return 1
-	fi
-
-	vim $(fzf --walker=file,hidden)
-}
-
-function tmuxd {
+function tmuxn {
 	tmux new-session -s $(pwd | rev | cut -d/ -f1 | rev)
 }
 
-function tmuxf {
-	if [[ $(command -v fzf) == '' ]]; then
-		echo 'fzf is not installed'
-		return 1
-	fi
-
-	cdf
-	tmuxd
+function tmuxr {
+	fmr
+	tmuxn
 }
 
 ## Other stuff
