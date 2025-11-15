@@ -1,6 +1,5 @@
 ## Variables
 unset HISTFILE
-export EDITOR=vim
 
 if [[ $XDG_SESSION_TYPE == "wayland" ]]; then
 	export MOZ_ENABLE_WAYLAND=1
@@ -27,12 +26,11 @@ alias Up-p="sudo pacman -Syu --noconfirm; poweroff"
 alias fm="ranger"
 function fmd {
 	ranger --choosedir=$HOME/.rangerdir
-	cd $(cat $HOME/.rangerdir)
+	cd "$(cat ${HOME}/.rangerdir)"
 }
 alias Sway="dbus-run-session sway"
 
 # core stuff
-alias vi="vim"
 alias pgnu="ping gnu.org"
 alias grep="grep --color=auto --exclude={tags,Makefile,build.sh,.gitignore} --exclude-dir={.cache,.git,.vscode}"
 alias zgrep="zgrep --color=auto"
