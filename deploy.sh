@@ -13,7 +13,7 @@ if [[ -n $(command -v pacman) ]]; then
 	sudo systemctl enable --user wireplumber
 	sudo systemctl enable --user mako
 
-	sudo ln -s $(which vim) /usr/local/vi
+	sudo ln -s $(which vim) /usr/local/bin/vi
 
 	ln -s $(pwd)/cli/bash_ez    $HOME/.bash_ez
 	ln -s $(pwd)/cli/vimrc      $HOME/.vimrc
