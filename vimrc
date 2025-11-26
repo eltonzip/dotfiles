@@ -1,0 +1,86 @@
+" Options
+set nocompatible
+set showcmd
+set wildmenu
+set viminfofile="NONE"
+set scrolloff=0
+set mouse=a
+
+set noswapfile
+set nobackup
+
+set autoindent
+set smartindent
+
+set incsearch
+set ignorecase
+set smartcase
+set hlsearch
+
+set path+=**
+
+" Tabs
+set noexpandtab
+set smarttab
+set shiftwidth=4
+set tabstop=4
+
+" Colors
+syntax on
+set background=dark
+
+" Gvim
+if has('gui_running')
+	set guioptions-=T "toolbar
+	set background=light
+endif
+
+" Keymaps
+let mapleader = " "
+let maplocalleader = "\\"
+
+nnoremap - :Explore<cr>
+
+nnoremap <silent> <C-l> :noh<cr><C-l>
+
+nnoremap <leader>ls :ls<cr>:b 
+nnoremap <leader>gg :grep -r 
+nnoremap <leader>ff :find 
+
+nnoremap <silent> <leader>co :copen<cr>
+nnoremap <silent> <leader>cc :cclose<cr>
+nnoremap <silent> <C-j> :cnext<cr>
+nnoremap <silent> <C-k> :cprevious<cr>
+
+nnoremap <silent> <C-p> O<Esc>
+
+nnoremap <leader>mp :set makeprg=
+nnoremap <leader>mm :make<cr>
+
+nnoremap <silent> <leader>ke :set keymap=""<cr>
+nnoremap <silent> <leader>kr :set keymap=russian-jcukenwin<cr>
+
+" C/C++ stuff
+let c_syntax_for_h = 1
+
+augroup EZ_CCPP
+	autocmd!
+	autocmd FileType c,cpp iabbrev  Cm /*  */<esc>hhh
+	autocmd FileType c,cpp iabbrev  Clm /*<cr>*/<esc>O**
+	autocmd FileType c,cpp iabbrev  Cmain int main(int argc, char *argv[])<cr>{<cr>return 0;<cr>}<esc>kO<esc>k
+augroup END
+
+" Python stuff
+augroup EZ_PYTHON
+	autocmd!
+	autocmd FileType python iabbrev Pmain if __name__ == "__main__":<esc>
+augroup END
+
+" netrw
+let g:netrw_banner = 0
+
+" Grep
+set grepprg=grep\ -IHn\ --exclude={tags,Makefile,build.sh,.gitignore}\ --exclude-dir={.cache,.git,vscode}
+
+nnoremap <leader>ga :set grepprg=grep\ -IHn\ --exclude={tags,Makefile,build.sh,.gitignore}\ --exclude-dir={.cache,.git,vscode}<cr>
+nnoremap <leader>gr :set grepprg=git\ grep\ -IHn<cr>

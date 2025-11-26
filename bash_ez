@@ -1,0 +1,56 @@
+## Variables
+unset HISTFILE
+
+if [[ $XDG_SESSION_TYPE == "wayland" ]]; then
+	export MOZ_ENABLE_WAYLAND=1
+fi
+
+## Prompt
+PS1="\[\033[1;34m\]\W\[\033[0;37m\] \$ "
+
+## Aliases
+alias reload="source ~/.bashrc"
+
+alias ..="cd .."
+alias ...="cd ../.."
+alias -- -="cd -"
+
+alias cdin="pwd >~/.cdbuff"
+function cdto {
+	cd $(cat $HOME/.cdbuff)
+}
+
+alias Up="sudo pacman -Syu --noconfirm"
+alias Up-r="sudo pacman -Syu --noconfirm; reboot"
+alias Up-p="sudo pacman -Syu --noconfirm; poweroff"
+alias Sway="dbus-run-session sway"
+
+# core stuff
+alias pgnu="ping gnu.org"
+alias grep="grep --color=auto --exclude={tags,Makefile,build.sh,.gitignore} --exclude-dir={.cache,.git,.vscode}"
+alias zgrep="zgrep --color=auto"
+alias less="less --mouse --wheel-lines=3 -i"
+alias date="date +'%H:%M:%S %A %B %d.%m.%Y'"
+alias cal="cal -3m"
+
+# dev
+alias ctags="ctags -R --kinds-C=+DLgpxzl --kinds-C++=+ADgLNUZpxzl --kinds-Python=+lz --fields=+iaS --extras=+q"
+
+## ez-* stuff
+# not called 'ez', but it is my thing
+
+alias ez-drop_caches="sudo sh -c 'echo 3 >/proc/sys/vm/drop_caches'"
+alias ez-git="git add . && git commit && git push"
+
+function tmuxd {
+	tmux new-session -s $(pwd | rev | cut -d/ -f1 | rev)
+}
+
+## Other stuff
+MAILCHECK=-1
+
+## tmux
+tmux has-session -t='Main' 2>/dev/null
+if [[ $? != 0 && $TMUX != '' ]]; then
+       tmux rename-session Main
+fi
