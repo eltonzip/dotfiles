@@ -1,1 +1,1 @@
-Execute `deploy.sh` on Arch
+Execute `deploy.sh` on Debian
