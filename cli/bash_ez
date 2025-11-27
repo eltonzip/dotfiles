@@ -20,11 +20,6 @@ function cdto {
 	cd $(cat $HOME/.cdbuff)
 }
 
-alias Up="sudo pacman -Syu --noconfirm"
-alias Up-r="sudo pacman -Syu --noconfirm; reboot"
-alias Up-p="sudo pacman -Syu --noconfirm; poweroff"
-alias Sway="dbus-run-session sway"
-
 # core stuff
 alias pgnu="ping gnu.org"
 alias grep="grep --color=auto --exclude={tags,Makefile,build.sh,.gitignore} --exclude-dir={.cache,.git,.vscode}"
