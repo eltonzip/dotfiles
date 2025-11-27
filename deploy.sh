@@ -6,14 +6,14 @@ if [[ -z $(command -v pacman) ]]; then
 fi
 
 if [[  -n $1 && $1 == 'gui' ]]; then
-	sudo pacman -S firefox libreoffice-fresh pavucontrol             \
+	sudo pacman -S --needed firefox libreoffice-fresh pavucontrol    \
 		noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra  \
-		foot mpv
+		foot mpv terminus-font
 
-	ln -s $(pwd)/gui/foot    $HOME/.config/foot
-	ln -s $(pwd)/gui/mpv     $HOME/.config/mpv
+	ln -s $(pwd)/gui/foot  $HOME/.config/foot
+	ln -s $(pwd)/gui/mpv   $HOME/.config/mpv
 else
-	sudo pacman -S needed tmux gdb ctags
+	sudo pacman -S --needed tmux gdb ctags
 
 	ln -s $(pwd)/cli/bash_ez    $HOME/.bash_ez
 	ln -s $(pwd)/cli/vimrc      $HOME/.vimrc
