@@ -16,6 +16,7 @@ if [[  -n $1 && $1 == 'gui' ]]; then
 	sudo usermod -aG seat "${USER}"
 	sudo systemctl enable seatd
 	systemctl --user enable pipewire-pulse
+	sudo systemctl enable bluetooth
 
 	mkdir -p $HOME/{.config,Pictures/Screenshots}
 
