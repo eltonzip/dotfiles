@@ -6,12 +6,23 @@ if [[ -z $(command -v pacman) ]]; then
 fi
 
 if [[  -n $1 && $1 == 'gui' ]]; then
-	sudo pacman -S --needed firefox libreoffice-fresh pavucontrol    \
-		noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra  \
-		foot mpv terminus-font
+	sudo pacman -S --needed firefox libreoffice-fresh pavucontrol      \
+		noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra    \
+		sway pcmanfm grim slurp mako swaylock wmenu blueman imv        \
+		xdg-desktop-portal-gtk xdg-desktop-portal-wlr wl-clipboard     \
+		foot mpv terminus-font zathura zathura-djvu zathura-pdf-mupdf  \
+		xorg-xwayland
 
-	ln -s $(pwd)/gui/foot  $HOME/.config/foot
-	ln -s $(pwd)/gui/mpv   $HOME/.config/mpv
+	sudo usermod -aG seat "${USERNAME}"
+	sudo systemctl enable seatd
+
+	mkdir -p $HOME/{.config,Pictures/Screenshots}
+
+	ln -s $(pwd)/gui/sway     $HOME/.config/sway
+	ln -s $(pwd)/gui/foot     $HOME/.config/foot
+	ln -s $(pwd)/gui/mpv      $HOME/.config/mpv
+	ln -s $(pwd)/gui/mako     $HOME/.config/mako
+	ln -s $(pwd)/gui/zathura  $HOME/.config/zathura
 else
 	sudo pacman -S --needed tmux gdb ctags
 
@@ -29,5 +40,6 @@ if [[ $? != 0 ]]; then
 	sed -i '$a\
 \
 #eltonzip:\
+alias Sway="dbus-run-session sway"\
 [[ -L $HOME/.bash_ez ]] && . $HOME/.bash_ez' $HOME/.bashrc
 fi
