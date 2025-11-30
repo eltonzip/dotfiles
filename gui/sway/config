@@ -1,10 +1,12 @@
+font Terminus 8
+
 set $mod Mod4
 set $left h
 set $down j
 set $up k
 set $right l
 set $term foot
-set $menu wmenu-run
+set $menu wmenu-run -f "Terminus 10"
 
 output eDP-1 disable
 output HDMI-A-1 resolution 1920x1080@120.00Hz
@@ -81,6 +83,7 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 bindsym $mod+a focus parent
+bindsym $mod+d focus child
 
 bindsym $mod+Shift+minus move scratchpad
 
@@ -109,8 +112,8 @@ bar {
 
 	colors {
 		statusline #ffffff
-			background #000000
-			inactive_workspace #32323200 #32323200 #5c5c5c
+		background #000000
+		inactive_workspace #32323200 #32323200 #5c5c5c
 	}
 }
 
@@ -118,6 +121,8 @@ include /etc/sway/config.d/*
 
 #eltonzip:
 exec blueman-applet
+exec mako
+
 mode "b - blueman, p - pavucontrol, f - file manager" {
 	bindsym b exec blueman-manager
 	bindsym p exec pavucontrol
@@ -128,8 +133,10 @@ mode "b - blueman, p - pavucontrol, f - file manager" {
 }
 bindsym $mod+o mode "b - blueman, p - pavucontrol, f - file manager"
 
-bindsym $mod+x grim -g "$(slurp)" $HOME/Pictures/Screenshots
-bindsym $mod+Shift+x grim -g "$(slurp)" | wl-copy
+bindsym $mod+x       exec grim -g "$(slurp)" $HOME/Pictures/Screenshots/$(/usr/bin/date +'%s_grim.png')
+bindsym $mod+Shift+x exec grim -g "$(slurp)" - | wl-copy
 
 bindsym $mod+Ctrl+l exec swaylock -e
 bindsym $mod+Ctrl+s exec systemctl suspend && swaylock -e
+
+bindsym --release button3 kill

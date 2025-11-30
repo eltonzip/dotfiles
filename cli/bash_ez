@@ -20,6 +20,11 @@ function cdto {
 	cd $(cat $HOME/.cdbuff)
 }
 
+alias Sway="dbus-run-session sway"
+alias Up="sudo pacman -Syu --noconfirm"
+alias Up-r="sudo pacman -Syu --noconfirm && reboot"
+alias Up-p="sudo pacman -Syu --noconfirm && poweroff"
+
 # core stuff
 alias pgnu="ping gnu.org"
 alias grep="grep --color=auto --exclude={tags,Makefile,build.sh,.gitignore} --exclude-dir={.cache,.git,.vscode}"
@@ -43,9 +48,3 @@ function tmuxd {
 
 ## Other stuff
 MAILCHECK=-1
-
-## tmux
-tmux has-session -t='Main' 2>/dev/null
-if [[ $? != 0 && $TMUX != '' ]]; then
-       tmux rename-session Main
-fi

@@ -11,10 +11,11 @@ if [[  -n $1 && $1 == 'gui' ]]; then
 		sway pcmanfm grim slurp mako swaylock wmenu blueman imv        \
 		xdg-desktop-portal-gtk xdg-desktop-portal-wlr wl-clipboard     \
 		foot mpv terminus-font zathura zathura-djvu zathura-pdf-mupdf  \
-		xorg-xwayland
+		xorg-xwayland pipewire-pulse
 
-	sudo usermod -aG seat "${USERNAME}"
+	sudo usermod -aG seat "${USER}"
 	sudo systemctl enable seatd
+	systemctl --user enable pipewire-pulse
 
 	mkdir -p $HOME/{.config,Pictures/Screenshots}
 
@@ -40,6 +41,5 @@ if [[ $? != 0 ]]; then
 	sed -i '$a\
 \
 #eltonzip:\
-alias Sway="dbus-run-session sway"\
 [[ -L $HOME/.bash_ez ]] && . $HOME/.bash_ez' $HOME/.bashrc
 fi
