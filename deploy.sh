@@ -11,10 +11,8 @@ if [[  -n $1 && $1 == 'gui' ]]; then
 		sway pcmanfm grim slurp mako swaylock wmenu blueman imv        \
 		xdg-desktop-portal-gtk xdg-desktop-portal-wlr wl-clipboard     \
 		foot mpv terminus-font zathura zathura-djvu zathura-pdf-mupdf  \
-		xorg-xwayland pipewire-pulse
+		xorg-xwayland pipewire-pulse polkit
 
-	sudo usermod -aG seat "${USER}"
-	sudo systemctl enable seatd
 	systemctl --user enable pipewire-pulse
 	sudo systemctl enable bluetooth
 
