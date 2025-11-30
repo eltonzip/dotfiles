@@ -6,7 +6,7 @@ set $down j
 set $up k
 set $right l
 set $term foot
-set $menu wmenu-run -f "Terminus 10"
+set $menu wmenu-run -if "Terminus 10"
 
 output eDP-1 disable
 output HDMI-A-1 resolution 1920x1080@120.00Hz
