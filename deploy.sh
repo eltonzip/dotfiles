@@ -6,11 +6,11 @@ if [[ -z $(command -v pacman) ]]; then
 fi
 
 if [[  -n $1 && $1 == 'gui' ]]; then
-	sudo pacman -S --needed firefox libreoffice-fresh pavucontrol      \
-		noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra    \
-		sway pcmanfm grim slurp mako swaylock wmenu blueman imv        \
-		xdg-desktop-portal-gtk xdg-desktop-portal-wlr wl-clipboard     \
-		foot mpv terminus-font zathura zathura-djvu zathura-pdf-mupdf  \
+	sudo pacman -S --needed firefox libreoffice-fresh pavucontrol           \
+		noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra         \
+		sway pcmanfm grim slurp mako swaylock wmenu blueman imv             \
+		xdg-desktop-portal-gtk xdg-desktop-portal-wlr wl-clipboard          \
+		alacritty mpv terminus-font zathura zathura-djvu zathura-pdf-mupdf  \
 		xorg-xwayland pipewire-pulse polkit
 
 	systemctl --user enable pipewire-pulse
@@ -22,19 +22,18 @@ if [[  -n $1 && $1 == 'gui' ]]; then
 
 	mkdir -p $HOME/{.config,Pictures/Screenshots}
 
-	ln -s $(pwd)/gui/sway     $HOME/.config/sway
-	ln -s $(pwd)/gui/foot     $HOME/.config/foot
-	ln -s $(pwd)/gui/mpv      $HOME/.config/mpv
-	ln -s $(pwd)/gui/mako     $HOME/.config/mako
-	ln -s $(pwd)/gui/zathura  $HOME/.config/zathura
+	ln -s $(pwd)/gui/sway            $HOME/.config/sway
+	ln -s $(pwd)/gui/alacritty.toml  $HOME/.alacritty.toml
+	ln -s $(pwd)/gui/mpv             $HOME/.config/mpv
+	ln -s $(pwd)/gui/mako            $HOME/.config/mako
+	ln -s $(pwd)/gui/zathura         $HOME/.config/zathura
 else
-	sudo pacman -S --needed tmux gdb ctags
+	sudo pacman -S --needed gdb ctags
 
 	sudo ln -s $(which vim) /usr/bin/vi
 
 	ln -s $(pwd)/cli/bash_ez    $HOME/.bash_ez
 	ln -s $(pwd)/cli/vimrc      $HOME/.vimrc
-	ln -s $(pwd)/cli/tmux.conf  $HOME/.tmux.conf
 	ln -s $(pwd)/cli/gitconfig  $HOME/.gitconfig
 	ln -s $(pwd)/cli/gdbinit    $HOME/.gdbinit
 fi

@@ -19,7 +19,7 @@ set hlsearch
 
 set path+=**
 
-" Tabs
+" Tab character
 set noexpandtab
 set smarttab
 set shiftwidth=4
@@ -47,10 +47,10 @@ nnoremap <leader>ls :ls<cr>:b
 nnoremap <leader>gg :grep -r 
 nnoremap <leader>ff :find 
 
-nnoremap <silent> <leader>co :copen<cr>
-nnoremap <silent> <leader>cc :cclose<cr>
-nnoremap <silent> <C-j> :cnext<cr>
-nnoremap <silent> <C-k> :cprevious<cr>
+nnoremap <silent> <leader>co  :copen<cr>
+nnoremap <silent> <leader>cc  :cclose<cr>
+nnoremap <silent> <C-j>       :cnext<cr>
+nnoremap <silent> <C-k>       :cprevious<cr>
 
 nnoremap <silent> <C-p> O<Esc>
 
@@ -59,6 +59,19 @@ nnoremap <leader>mm :make<cr>
 
 nnoremap <silent> <leader>ke :set keymap=""<cr>
 nnoremap <silent> <leader>kr :set keymap=russian-jcukenwin<cr>
+
+" Tabs
+noremap <leader>tn  :tabnew<cr>
+noremap <leader>1   1gt
+noremap <leader>2   2gt
+noremap <leader>3   3gt
+noremap <leader>4   4gt
+noremap <leader>5   5gt
+noremap <leader>6   6gt
+noremap <leader>7   7gt
+noremap <leader>8   8gt
+noremap <leader>9   9gt
+noremap <leader>0   :tablast<cr>
 
 " C/C++ stuff
 let c_syntax_for_h = 1

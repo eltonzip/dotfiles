@@ -1,0 +1,36 @@
+[font]
+normal = { family = "Terminus" }
+size   = 10
+
+#eltonzip colorscheme:
+[colors.primary]
+background = "#2e2e2e"
+foreground = "#ffffff"
+
+[colors.normal]
+black    = "#000000"
+red      = "#ff1414"
+green    = "#00cd00"
+yellow   = "#cdcd00"
+blue     = "#45b1ff"
+magenta  = "#04ff3e"
+cyan     = "#06ffff"
+white    = "#ffffff"
+
+[colors.bright]
+black    = "#7f7f7f"
+red      = "#ff1414"
+green    = "#00ff00"
+yellow   = "#ffff00"
+blue     = "#3daee9"
+magenta  = "#04ff3e"
+cyan     = "#ff71fd"
+white    = "#ffffff"
+
+[cursor]
+style = { shape = "Block", blinking = "Always" }
+blink_interval  = 500
+blink_timeout   = 0
+
+[mouse]
+hide_when_typing = true
