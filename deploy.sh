@@ -16,6 +16,10 @@ if [[  -n $1 && $1 == 'gui' ]]; then
 	systemctl --user enable pipewire-pulse
 	sudo systemctl enable bluetooth
 
+	xdg-mime default imv.desktop image/png \
+		image/jpeg image/webp image/svg+xml image/tiff
+	xdg-mime default mpv.desktop image/gif
+
 	mkdir -p $HOME/{.config,Pictures/Screenshots}
 
 	ln -s $(pwd)/gui/sway     $HOME/.config/sway
