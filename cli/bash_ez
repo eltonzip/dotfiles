@@ -17,7 +17,7 @@ alias -- -="cd -"
 
 alias cdin="pwd >~/.cdbuff"
 function cdto {
-	cd $(cat $HOME/.cdbuff)
+	cd "$(cat $HOME/.cdbuff)"
 }
 
 alias Sway="dbus-run-session sway"
