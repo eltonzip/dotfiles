@@ -1,3 +1,6 @@
+[window]
+dynamic_title = false
+
 [font]
 normal = { family = "Terminus" }
 size   = 10
