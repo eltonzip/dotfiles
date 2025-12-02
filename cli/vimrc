@@ -61,7 +61,7 @@ nnoremap <silent> <leader>ke :set keymap=""<cr>
 nnoremap <silent> <leader>kr :set keymap=russian-jcukenwin<cr>
 
 " Tabs
-noremap <leader>tn  :tabnew<cr>
+noremap <leader>tt  :tabnew<cr>
 noremap <leader>1   1gt
 noremap <leader>2   2gt
 noremap <leader>3   3gt

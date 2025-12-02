@@ -108,7 +108,7 @@ bindsym $mod+r mode "resize"
 bar {
 	position bottom
 
-	status_command while date +'%H:%M:%S %A %B %d.%m.%Y'; do sleep 1; done
+	status_command while date +'%H:%M:%S'; do sleep 1; done
 
 	colors {
 		statusline #ffffff
