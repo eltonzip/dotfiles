@@ -1,4 +1,6 @@
 ## Variables
+export EDITOR=vim
+
 unset HISTFILE
 
 if [[ $XDG_SESSION_TYPE == "wayland" ]]; then

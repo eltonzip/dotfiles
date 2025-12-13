@@ -30,8 +30,6 @@ if [[  -n $1 && $1 == 'gui' ]]; then
 else
 	sudo pacman -S --needed gdb ctags
 
-	sudo ln -s $(which vim) /usr/bin/vi
-
 	ln -s $(pwd)/cli/bash_ez    $HOME/.bash_ez
 	ln -s $(pwd)/cli/vimrc      $HOME/.vimrc
 	ln -s $(pwd)/cli/gitconfig  $HOME/.gitconfig
