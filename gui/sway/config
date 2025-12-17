@@ -134,8 +134,8 @@ mode "b - blueman, p - pavucontrol, f - file manager" {
 }
 bindsym $mod+o mode "b - blueman, p - pavucontrol, f - file manager"
 
-bindsym $mod+x       exec grim -g "$(slurp)" $HOME/Pictures/Screenshots/$(/usr/bin/date +'%s_grim.png')
-bindsym $mod+Shift+x exec grim -g "$(slurp)" - | wl-copy
+bindsym $mod+x       exec grim -l 0 -g "$(slurp)" $HOME/Pictures/Screenshots/$(/usr/bin/date +'%s_grim.png')
+bindsym $mod+Shift+x exec grim -l 0 -g "$(slurp)" - | wl-copy
 
 bindsym $mod+Ctrl+l exec swaylock -e
 bindsym $mod+Ctrl+s exec systemctl suspend && swaylock -e
