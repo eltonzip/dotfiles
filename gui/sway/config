@@ -116,16 +116,6 @@ exec blueman-applet
 exec nm-applet
 exec mako
 
-mode "b - blueman, p - pavucontrol, f - file manager" {
-	bindsym b exec blueman-manager
-	bindsym p exec pavucontrol
-	bindsym f exec pcmanfm
-
-	bindsym Return mode "default"
-	bindsym Escape mode "default"
-}
-bindsym $mod+o mode "b - blueman, p - pavucontrol, f - file manager"
-
 bindsym $mod+x       exec grim -l 0 -g "$(slurp)" $HOME/Pictures/Screenshots/$(/usr/bin/date +'%s_grim.png')
 bindsym $mod+Shift+x exec grim -l 0 -g "$(slurp)" - | wl-copy
 
