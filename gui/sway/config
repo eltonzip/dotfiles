@@ -106,22 +106,14 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 bar {
-	position bottom
-
-	status_command while date +'%H:%M:%S'; do sleep 1; done
-
-	colors {
-		statusline #ffffff
-		background #000000
-	}
-
-	tray_output none
+	swaybar_command waybar
 }
 
 include /etc/sway/config.d/*
 
 #eltonzip:
 exec blueman-applet
+exec nm-applet
 exec mako
 
 mode "b - blueman, p - pavucontrol, f - file manager" {

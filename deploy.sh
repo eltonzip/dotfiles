@@ -11,7 +11,7 @@ if [[  -n $1 && $1 == 'gui' ]]; then
 		sway pcmanfm grim slurp mako swaylock wmenu blueman imv             \
 		xdg-desktop-portal-gtk xdg-desktop-portal-wlr wl-clipboard          \
 		alacritty mpv terminus-font zathura zathura-djvu zathura-pdf-mupdf  \
-		xorg-xwayland pipewire-pulse polkit
+		xorg-xwayland pipewire-pulse polkit network-manager-applet
 
 	systemctl --user enable pipewire-pulse
 	sudo systemctl enable bluetooth
@@ -23,6 +23,7 @@ if [[  -n $1 && $1 == 'gui' ]]; then
 	mkdir -p $HOME/{.config,Pictures/Screenshots}
 
 	ln -s $(pwd)/gui/sway            $HOME/.config/sway
+	ln -s $(pwd)/gui/waybar          $HOME/.config/waybar
 	ln -s $(pwd)/gui/alacritty.toml  $HOME/.alacritty.toml
 	ln -s $(pwd)/gui/mpv             $HOME/.config/mpv
 	ln -s $(pwd)/gui/mako            $HOME/.config/mako

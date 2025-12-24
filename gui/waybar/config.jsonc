@@ -1,0 +1,41 @@
+{
+    "position": "bottom", // Waybar position (top|bottom|left|right)
+    "spacing": 15, // Gaps between modules (4px)
+    "modules-left": [
+        "sway/workspaces",
+        "sway/mode",
+        "sway/scratchpad"
+    ],
+    "modules-right": [
+        "sway/language",
+        "pulseaudio",
+        "clock",
+        "tray"
+    ],
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+    "sway/scratchpad": {
+        "format": "{icon} {count}",
+        "show-empty": false,
+        "format-icons": ["", ""],
+        "tooltip": true,
+        "tooltip-format": "{app}: {title}"
+    },
+    "tray": {
+        "spacing": 10
+    },
+    "clock": {
+        // "timezone": "America/New_York",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%A %B %d.%m.%Y}"
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{volume}% ON",
+        "format-bluetooth": "{volume}% BLTH",
+        "format-bluetooth-muted": "BLTH MUTE",
+        "format-muted": "MUTE",
+        "on-click": "pavucontrol"
+    }
+}
