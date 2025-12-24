@@ -25,11 +25,6 @@
     "tray": {
         "spacing": 10
     },
-    "clock": {
-        // "timezone": "America/New_York",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%A %B %d.%m.%Y}"
-    },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "format": "{volume}% ON",
