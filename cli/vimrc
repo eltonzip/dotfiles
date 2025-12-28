@@ -71,7 +71,9 @@ noremap <silent> <leader>6   6gt
 noremap <silent> <leader>7   7gt
 noremap <silent> <leader>8   8gt
 noremap <silent> <leader>9   9gt
-noremap <silent> <leader>0   :tablast<cr>
+noremap <silent> <leader>0   10gt
+noremap <silent> <leader>!   :tabfirst<cr>
+noremap <silent> <leader>)   :tablast<cr>
 
 " C/C++ stuff
 let c_syntax_for_h = 1
