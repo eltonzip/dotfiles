@@ -119,7 +119,7 @@ exec mako
 bindsym $mod+x       exec grim -l 0 -g "$(slurp)" $HOME/Pictures/Screenshots/$(/usr/bin/date +'%s_grim.png')
 bindsym $mod+Shift+x exec grim -l 0 -g "$(slurp)" - | wl-copy
 
-bindsym $mod+Ctrl+l exec swaylock -e
-bindsym $mod+Ctrl+s exec systemctl suspend && swaylock -e
+bindsym $mod+Ctrl+l exec swaylock -e -c 000000
+bindsym $mod+Ctrl+s exec systemctl swaylock -e -c 000000
 
 bindsym --release button3 kill
