@@ -120,6 +120,6 @@ bindsym $mod+x       exec grim -l 0 -g "$(slurp)" $HOME/Pictures/Screenshots/$(/
 bindsym $mod+Shift+x exec grim -l 0 -g "$(slurp)" - | wl-copy
 
 bindsym $mod+Ctrl+l exec swaylock -e -c 000000
-bindsym $mod+Ctrl+s exec systemctl swaylock -e -c 000000
+bindsym $mod+Ctrl+s exec systemctl suspend && swaylock -e -c 000000
 
 bindsym --release button3 kill
