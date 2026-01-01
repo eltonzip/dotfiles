@@ -57,8 +57,8 @@ nnoremap <silent> <C-p> O<Esc>
 nnoremap <leader>mp :set makeprg=
 nnoremap <leader>mm :make<cr>
 
-nnoremap <silent> <leader>ke :set keymap=""<cr>
-nnoremap <silent> <leader>kr :set keymap=russian-jcukenwin<cr>
+nnoremap <leader>ke :set keymap=""<cr>
+nnoremap <leader>kr :set keymap=russian-jcukenwin<cr>
 
 " Tabs
 noremap <silent> <leader>tt  :tabnew<cr>
