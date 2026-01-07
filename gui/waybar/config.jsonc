@@ -12,6 +12,9 @@
         "clock",
         "tray"
     ],
+	"clock": {
+		"tooltip": false
+	},
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
