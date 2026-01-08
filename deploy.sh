@@ -41,6 +41,6 @@ grep 'bash_ez' $HOME/.bashrc &>/dev/null
 if [[ $? != 0 ]]; then
 	sed -i '$a\
 \
-#eltonzip:\
+#losercitymayor:\
 [[ -L $HOME/.bash_ez ]] && . $HOME/.bash_ez' $HOME/.bashrc
 fi

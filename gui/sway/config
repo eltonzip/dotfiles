@@ -111,7 +111,7 @@ bar {
 
 include /etc/sway/config.d/*
 
-#eltonzip:
+#losercitymayor:
 exec blueman-applet
 exec nm-applet
 exec mako
