@@ -31,16 +31,16 @@ if [[  -n $1 && $1 == 'gui' ]]; then
 else
 	sudo pacman -S --needed gdb ctags
 
-	ln -s $(pwd)/cli/bash_ez    $HOME/.bash_ez
+	ln -s $(pwd)/cli/bashez    $HOME/.bashez
 	ln -s $(pwd)/cli/vimrc      $HOME/.vimrc
 	ln -s $(pwd)/cli/gitconfig  $HOME/.gitconfig
 	ln -s $(pwd)/cli/gdbinit    $HOME/.gdbinit
 fi
 
-grep 'bash_ez' $HOME/.bashrc &>/dev/null
+grep 'bashez' $HOME/.bashrc &>/dev/null
 if [[ $? != 0 ]]; then
 	sed -i '$a\
 \
 #losercitymayor:\
-[[ -L $HOME/.bash_ez ]] && . $HOME/.bash_ez' $HOME/.bashrc
+[[ -L $HOME/.bashez ]] && . $HOME/.bashez' $HOME/.bashrc
 fi
