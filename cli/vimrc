@@ -60,6 +60,9 @@ nnoremap <leader>mm :make<cr>
 nnoremap <leader>ke :set keymap=""<cr>
 nnoremap <leader>kr :set keymap=russian-jcukenwin<cr>
 
+nnoremap <leader>cc :set colorcolumn=80<cr>
+nnoremap <leader>c0 :set colorcolumn=<cr>
+
 " Tabs
 noremap <silent> <leader>tt  :tabnew<cr>
 noremap <silent> <leader>1   1gt
